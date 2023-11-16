@@ -2,7 +2,28 @@
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
+    font-family: 'Arial', sans-serif;
 }
+
+.slider-container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 30px;
+
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.slider img {
+    width: 100%;
+    height: 400px;
+}
+
 
 /* Styles généraux */
 body {
@@ -11,7 +32,7 @@ body {
 }
 
 .header {
-    background-color:transparent;
+    background-color: #081b29 ;
     padding: 15px 10%;
     position: fixed;
     top: 0;
@@ -107,10 +128,19 @@ body {
 }
 .content-stage{
     display: flex;
+    justify-content: space-between;
     width: 500px;
     height: 50px;
-    margin-top: -500px;
     margin-bottom: auto;
+}
+.stage h2{
+    color:#00abf0;
+    justify-content: center;
+    display: flex;
+    background-color: #1e2731;
+    height: 50px;
+    align-items: center;
+    margin-bottom: 20px;
 }
 .stage .box-stage{
     margin-left: 150px;
@@ -130,6 +160,7 @@ body {
     margin-bottom: 25px;
     color: blueviolet;
 }
+
 .box-stage p{
     font-size: 20px;
     width: 400px;
@@ -164,7 +195,7 @@ body {
     margin-bottom: 25px;
 }
 .content-projets{
-    margin-top: -100px;
+    margin-top: 400px;
     
 
 
@@ -287,7 +318,7 @@ section h2{
 
 }
 .content-page{
-    margin-top: 550px;
+    margin-top: 50px;
     background-color: #ededed;
 }
 .social-icons1{
@@ -390,6 +421,11 @@ button {
     border-radius: 3px;
     cursor: pointer;
     font-weight: bold;
+    margin-left: 200px;
+    margin-top: 30px;
+    height: 50px;
+    width: 150px;
+    font-size: medium;
 }
 
 button:hover {
