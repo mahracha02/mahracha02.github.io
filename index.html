@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <title>Mon Portfolio</title>
     
 </head>
@@ -51,7 +52,35 @@
         </section>
     
     
-    <div class="content-page">   
+    <div class="content-page">  
+            <section class="skills" id="competences">
+                <h2>Mes competences</h2>
+
+                <div class="skills-container">
+                    <div class="skill-bar">
+                        <div class="skill-label">HTML & CSS </div>
+                        <div class="skill-progress" style="width: 100%;"></div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-label">Java & PHP </div>
+                        <div class="skill-progress" style="width: 80%;"></div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-label">Python </div>
+                        <div class="skill-progress" style="width: 70%;"></div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-label">Cybersécurité </div>
+                        <div class="skill-progress" style="width: 60%;"></div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-label">C#</div>
+                        <div class="skill-progress" style="width: 50%;"></div>
+                    </div>
+                </div>
+                        
+            </section>        
+        
             <section class="stage" id="stages">
               <h2>Stages</h2>
                 <div class="content-stage">
@@ -127,36 +156,126 @@
             <section class="veilleTech" id="veilleTech">
                 <div class="content-veilleTech">
                     <h2>Veille Thechnologie</h2>
-                    <div class="tech">
-                        <div class="box-tech">
-                            <a href="veille1.html"><h3>VEILLE 1</h3></a>
-                            <div class="tech-contenu">
-                               <p>
-                               
-                               
-                            </p> 
+                    <section class="case-study">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <h4 class="sub-heading">EXCLUSIF</h4>
+                              <h1 class="heading purple"><span class="purple">2023:</span> Voici <br>Les 5 grandes tendances technologiques</h1>
+                              <!-- Swiper -->
+                              <div class="swiper-container client-swiper">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide client-box">
+                                    <img src="photos/Veille.jpg" class="client-logo">
+                                    <h3 class="text-left title">L’IA générative : l’automatisation au quotidien</h3>
+                                    <p class="text-parag">2023 a été l’année où l’IA générative a fait irruption dans le courant dominant. 
+                                        2024 sera l’année où le monde découvrira à quel point elle peut être puissante et utile. 
+                                        Aujourd’hui, si vous n’êtes pas un technicien, la simple expression « intelligence artificielle » 
+                                        (IA) peut vous mettre mal à l’aise. Si vous ne craignez pas qu’elle prenne le contrôle du monde ou 
+                                        qu’elle détruise la race humaine, vous avez peut-être peur que celle-ci vous fasse perdre votre emploi.
+
+                                        Mais au fur et à mesure que l’IA générative se fraye un chemin dans les applications que nous utilisons 
+                                        tous les jours, des moteurs de recherche aux logiciels de bureautique, en passant par les progiciels de 
+                                        conception et les outils de communication, les gens finiront par comprendre son potentiel. Utilisée 
+                                        correctement, elle revient à disposer d’un assistant personnel super intelligent 24 heures sur 24,
+                                        7 jours sur 7, qui nous rend plus efficaces, plus rapides et plus productifs.
+                                        
+                                        Plus important encore, en confiant à l’IA les tâches quotidiennes répétitives – obtenir des informations,
+                                        planifier, gérer la conformité, organiser des idées, structurer des projets -, nous disposerons de plus 
+                                        de temps pour exploiter nos compétences véritablement humaines. Nous passerons plus de temps à être créatifs, 
+                                        à explorer de nouvelles idées et une pensée originale, ou à communiquer avec des humains plutôt qu’à 
+                                        programmer des machines. Le génie est sorti de la bouteille, 
+                                        et bien qu’il reste des défis indéniables à relever en matière d’éthique et de réglementation, 
+                                        2024 sera probablement l’année où tout le monde commencera à comprendre à quel point l’IA générative transformera nos vies.</p><br>
+                                    <p class="text-left tag">Forbes, Website</p>
+                                    <p class="text-left"><a href="https://www.forbes.fr/technologie/exclusif-les-5-grandes-tendances-technologiques-en-2024/">Voir plus &#8594;</a></p>
+                                  </div>
+                                  <div class="swiper-slide client-box">
+                                    <img src="photos/veille2.jpg" class="client-logo">
+                                    <h3 class="text-left title">Convergence phygitale</h3>
+                                    <p>Le réel et le numérique sont de plus en plus imbriqués. Des technologies telles que la réalité augmentée (RA),
+                                         la réalité virtuelle (RV) et l’internet immersif font tomber les barrières entre le monde physique et les 
+                                         domaines numériques où nous passons de plus en plus de temps. Plus que jamais, nous existons en tant 
+                                         qu’avatars numériques dans des environnements virtuels. C’est vrai pour le travail, où nous collaborons 
+                                         à distance grâce à des plateformes telles que Zoom, Teams et Slack, et pour le jeu, où les jeux en ligne 
+                                         et les sports électroniques sont plus populaires que jamais. Nous utilisons des applications sociales 
+                                         telles que TikTok et Instagram pour créer des espaces virtuels où nous partageons des moments de notre 
+                                         vie « réelle ». 
+                                        Ces moments sont sélectionnés et filtrés pour créer des personnalités numériques qui deviennent notre « moi virtuel ».</p><br>
+                                    <p class="text-left tag">Forbes, Website</p>
+                                    <p class="text-left"><a href="https://www.forbes.fr/technologie/exclusif-les-5-grandes-tendances-technologiques-en-2024/">Voir plus &#8594;</a></p>
+                                  </div>
+                                  <div class="swiper-slide client-box">
+                                    <img src="photos/veille3.jpg" class="client-logo">
+                                    <h3 class="text-left title">Technologie durable</h3>
+                                    <p>
+                                        La technologie durable comprend des façons plus écologiques de faire les choses que nous faisons déjà – 
+                                        comme les voitures électriques, les vélos et les transports publics qui continueront d’augmenter leur 
+                                        part de marché en 2024. Elles comprennent également de nouvelles solutions aux problèmes environnementaux,
+                                         telles que le captage et le stockage du carbone, ainsi que des technologies d’énergie verte et renouvelable. 
+                                         L’économie circulaire deviendra un concept de plus en plus important à mesure que la durabilité, la 
+                                         recyclabilité et la réutilisation seront intégrées directement dans les produits au stade de la conception. 
+                                         Le monde de la technologie adoptera des idées telles que le Green cloud computing, où l’infrastructure et 
+                                         les services donnent la priorité à la réduction de la consommation d’énergie et des émissions de carbone, 
+                                         et les applications durables – 
+                                        des outils logiciels conçus pour nous aider à vivre d’une manière plus respectueuse de l’environnement.
+                                    </p><br>
+                                    <p class="text-left tag">Forbes, Website</p>
+                                    <p class="text-left"><a href="https://www.forbes.fr/technologie/exclusif-les-5-grandes-tendances-technologiques-en-2024/">Voir plus &#8594;</a></p>
+                                  </div>
+                                  <div class="swiper-slide client-box">
+                                    <img src="photos/CYBERRESILIENCE-1-01.jpg" class="client-logo">
+                                    <h3 class="text-left title">La cyber-résilience</h3>
+                                    <p>
+                                        La recherche suggère qu’une entreprise sur deux a été victime d’une cyberattaque réussie au cours des 
+                                        trois dernières années, et le coût de ces attaques pour l’industrie devrait atteindre plus de 10 000 
+                                        milliards de dollars (9 300 milliards d’euros) d’ici à la fin de 2024. Face à cette menace croissante, 
+                                        les solutions technologiques conçues pour renforcer les défenses et nous donner une chance 
+                                        de nous battre figurent en bonne place sur la liste des incontournables de chaque organisation.
+                                        La cyber-résilience va toutefois au-delà de la cybersécurité, puisqu’elle englobe également les mesures 
+                                        qui peuvent être prises pour récupérer et assurer la continuité lorsque les défenses sont violées ou en 
+                                        raison de circonstances indépendantes de notre volonté. Cela peut signifier la mise en place de procédures 
+                                        de travail à distance pour s’assurer que les entreprises peuvent fonctionner lorsque le personnel ne peut 
+                                        pas se rendre dans les sites centraux – une solution technologique qui pourrait ne pas être traditionnellement
+                                        considérée comme un élément de la cybersécurité.
+                                    </p>
+                                    <p class="text-left tag">Forbes, Website</p>
+                                    <p class="text-left"><a href="https://www.forbes.fr/technologie/exclusif-les-5-grandes-tendances-technologiques-en-2024/">Voir plus &#8594;</a></p>
+                                  </div>
+                                  <div class="swiper-slide client-box">
+                                    <img src="photos/OIP.jpg" class="client-logo">
+                                    <h3 class="text-left title">Informatique quantique</h3>
+                                    <p>
+                                        L’informatique quantique fait l’objet d’un engouement croissant depuis un certain temps, et 2024 marquera 
+                                        probablement l’année de la transition vers des avantages tangibles. Les ordinateurs quantiques sont capables
+                                         d’effectuer un grand nombre de calculs simultanément en exploitant des éléments étranges et merveilleux de 
+                                         la physique quantique, tels que l’intrication et la superposition quantiques. Cela leur permet de fonctionner 
+                                         à l’aide de bits quantiques (qubits) qui peuvent exister dans plusieurs états simultanément, 
+                                        plutôt que dans un état de 1 ou 0, comme les bits informatiques traditionnels.
+                                    </p>
+                                    <p class="text-left tag">Forbes, Website</p>
+                                    <p class="text-left"><a href="https://www.forbes.fr/technologie/exclusif-les-5-grandes-tendances-technologiques-en-2024/">Voir plus &#8594;</a></p>
+                                  </div>
+                                </div>
+                               <div class="swiper-button-prev"></div>
+                               <div class="swiper-button-next"></div>   
+                              </div>
+
+                              <!-- Contenu caché -->
+                              
+                                  
                             </div>
                             
-                        </div>
-                    </div>
-                    <div class="tech2">
-                        <div class="box-tech">
-                            <a href="veille2.html"><h3>VEILLE 2</h3></a>
-                            <p>
-                               
-                               
-                            </p>
-                        </div>
-                    </div>
-                    <div class="tech3">
-                        <div class="box-tech">
-                            <a href="veille3.html"><h3>VEILLE 3</h3></a>
-                            <p>
-                               
+                            
+
+                    
                               
-                            </p>
+                            
+                            </div>
+                          </div>
                         </div>
-                    </div>
+                      </section>
+                    
 
                 </div>
             </section>
@@ -183,15 +302,36 @@
                     </form>
                 </div>
             </section>
-    </div>   
-    <footer>
-        <div class="social-icons">
-            <a href="#"><i class='bx bxl-facebook-circle'></i></a>
-            <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
-            <a href="#"><i class='bx bxl-twitter' ></i></a>
-            <a href="#"><i class='bx bxl-linkedin-square'></i></a>
-        </div>
-        <p>&copy; 2023 Mon Portfolio</p>
-    </footer>
+    </div> 
+
+    
+    <div class="container">
+        <footer class="footer">       
+            <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="#">ABDELHAKIM</a></p>
+            <div class="social-links text-right m-auto ml-sm-auto">
+                <a href="javascript:void(0)" class="link"><i class="ti-facebook"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-twitter-alt"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-google"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-pinterest-alt"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-instagram"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-rss"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var swiper = new Swiper('.client-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        });
+    </script>
 </body>
 </html>
