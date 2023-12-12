@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-dTvee9YLb7AgnQwO5e0BBP3fJl/TWJ0I3s1GIZsR/u4D5qJIKUpfVkN7wbdAiSXE" crossorigin="anonymous">
     <title>Mon Portfolio</title>
     
 </head>
@@ -22,7 +23,29 @@
         
      </nav>   
     </header>
-
     
-    </body>
-    </html>
+    <style>
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-icons a {
+            color: #333; /* Couleur des icônes */
+            font-size: 24px; /* Taille des icônes */
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: #007BFF; /* Couleur au survol des icônes */
+        }
+    </style>
+</head>
+<body>
+    <div class="social-icons">
+        <a href="lien-vers-votre-linkedin" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="lien-vers-votre-instagram" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="lien-vers-votre-github" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+</body>
+</html>
