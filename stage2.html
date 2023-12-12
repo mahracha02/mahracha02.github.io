@@ -39,9 +39,31 @@
         .social-icons a:hover {
             color: #007BFF; /* Couleur au survol des icônes */
         }
+        /* Styles pour le conteneur div */
+        div {
+        display: flex; /* Utilisation d'un modèle de boîte flexible pour aligner les images horizontalement */
+        justify-content: space-around; /* Espace équitable entre les éléments enfants */
+        align-items: center; /* Centre les éléments enfants verticalement */
+        padding: 20px; /* Ajoute un espacement intérieur pour plus de lisibilité */
+        background-color: #f8f8f8; /* Couleur de fond du conteneur */
+        border: 1px solid #ddd; /* Bordure du conteneur */
+        border-radius: 8px; /* Coins arrondis */
+        }
+
+        /* Styles pour les images à l'intérieur du conteneur div */
+        div img {
+        margin-top: 50px;
+        width: 800px; 
+        height: 800px; 
+        border-radius: 4px; /* Coins arrondis pour les images */
+        }
     </style>
-</head>
-<body>
+    <div>
+        <img src="photos/3IL.png" alt="3IL" class="3IL">
+    </div>
+
+
+
     <div class="social-icons">
         <a href="lien-vers-votre-linkedin" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
         <a href="lien-vers-votre-instagram" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
