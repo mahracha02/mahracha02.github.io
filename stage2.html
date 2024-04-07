@@ -5,18 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="portfolio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-dTvee9YLb7AgnQwO5e0BBP3fJl/TWJ0I3s1GIZsR/u4D5qJIKUpfVkN7wbdAiSXE" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href=" https://cdn.jsdelivr.net/npm/swiper@11.1.0/swiper-bundle.min.css " rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Mon Portfolio</title>
     
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo"> ABDELHAKIM</a>
+        <a href="index.html" class="logo"> ABDELHAKIM</a>
      <nav class="navbar">
         
             <a href="#apropos">À propos</a>
             <a href="#stages">Stages</a>
-            <a href="#projets">Projets</a>
-            <a href="#projetperso">Projets personnels</a>
+            <div class="dropdown">
+                <a class="dropdown-toggle" href="#" role="button" id="projetsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Projets
+                </a>
+                <div class="dropdown-menu bg-dark" aria-labelledby="projetsDropdown">
+                    <a class="dropdown-item text-dark bg-white" href="#projetAnnee1">1ère année</a>
+                    <a class="dropdown-item text-dark bg-white" href="#projetAnnee2">2ème année</a>
+                </div>
+            </div>
+            <a href="index.html #competences">Compétences</a>
             <a href="#veilleTech">Veille Tech</a>
             <a href="#contact">Contact</a>
         
@@ -64,10 +81,286 @@
 
 
 
-    <div class="social-icons">
-        <a href="lien-vers-votre-linkedin" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="lien-vers-votre-instagram" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="lien-vers-votre-github" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    <h2>Informations sur le stage</h2>
+
+    <table>
+        <tr>
+            <th>Période du stage</th>
+            <td>15 janvier 2024 - 08 mars 2024</td>
+        </tr>
+        <tr>
+            <th>Lieu de stage</th>
+            <td>3IL</td>
+        </tr>
+        <tr>
+            <th>Maître de stage</th>
+            <td>Mohamed Hamroune</td>
+        </tr>
+        <tr>
+            <th>Coordonnées maître de stage</th>
+            <td><a href="mailto:hamroune@3il.fr">hamroune@3il.fr</a></td>
+        </tr>
+        <tr>
+            <th>Horaire de travail</th>
+            <td>Du lundi au vendredi : 8h00 - 12h00 / 13h00 - 16h00</td>
+        </tr>
+    </table><br><br>
+
+    <section class="section1">
+        <h2>Objectifs du stage</h2>
+        <p>Le stage a pour objectif de me faire découvrir le monde du travail et de me faire appliquer les connaissances acquises en cours.</p>
+        <h1>Sommaire</h1><br>
+
+    <ul>
+        <li><a href="#presentation">Présentation de l'entreprise</a></li>
+        <li><a href="#compteRendu">Compte rendu hebdomadaire</a></li>
+    </ul>
+
+    <h2 id="presentation">Présentation de l'entreprise</h2>
+    <p>Fondé en 1987, le Groupe 3iL propose, avec le soutien de la CCI de Limoges et de la Haute-Vienne,
+         des formations supérieures en informatique, en ressources humaines et prévention des risques, 
+         à destination d’étudiants en poursuites d’études mais également de professionnels en reconversion, en formation continue ou en VAE.</p><br>
+        <img src="photos/3IL.png"><br>
+
+    <h2 id="compteRendu">Compte rendu hebdomadaire</h2>
+    <div class="report-section">
+        <h3>Rapport de Stage</h3>
+
+        <div class="week-buttons">
+            <button class="week-button active" onclick="toggleContent('week1')">1ère Semaine</button>
+            <button class="week-button" onclick="toggleContent('week2')">2ème Semaine</button>
+            <button class="week-button" onclick="toggleContent('week3')">3ème Semaine</button>
+            <button class="week-button" onclick="toggleContent('week4')">4ème Semaine</button>
+        </div>
+
+        
+        <div id="week1" style="display: none;">
+            <div class="report-section1">
+                <h1>Rapport de Stage - Première semaine (29/05/2023 - 02/06/2023)</h1>
+        
+                <div>
+                    <h3>29/05/2023</h3>
+                    <p>Jour férié</p>
+                </div>
+        
+                <div>
+                    <h3>30/05/2023</h3>
+                    <ul>
+                        <li>Présenter toute l'équipe de l'entreprise Broussaud.</li>
+                        <li>Découvrir les étapes de production de a-z.</li>
+                        <li>Obtenir une explication concernant (Modula: une machine de stock) ⇒ sa fonction: stock les matières premières pour fabriquer une chaussette. Sa logiciel s'appelle modula qui gère la base de donnée.</li>
+                        <li>Avoir l'occasion d'être en réunion (responsable commerce, Marketing et logistique) qui se fait chaque Lundi pour traiter les points faibles, problèmes des clients et les besoins de matière première.</li>
+                        <li>Une structure global qui résume comment on gère la base de donnée de l'entreprise.</li>
+                    </ul>
+                </div>
+        
+                <div>
+                    <h3>31/05/2023</h3>
+                    <ul>
+                        <li>Faire des requêtes MySql.</li>
+                        <li>Expliquer la différence entre INNER JOIN, JOIN(standard) et LEFT JOIN qui affiche tous (avec NULL).</li>
+                        <li>Faire la connexion BDD avec des extensions SQL en visual studio code.</li>
+                        <li>Accéder à la BD Test pour stagiaire ⇒ Tache à faire: trouver numéro des jours entre date d'aujourd'hui et dernier date mouvement de métier (machines de confection) ⇒ DATEDIFF(DAY, $variable, Grade DATE());</li>
+                    </ul>
+                </div>
+        
+                <div>
+                    <h3>01/06/2023</h3>
+                    <ul>
+                        <li>L'étape suivante après la réception des commandes Shopify ⇒ intégration (Sage), Scanner code barre(statut en prep) sur notre BDD.</li>
+                        <li>3 étapes ⇒ bon commandes ⇒ bon livraison ⇒ bon facturation.</li>
+                        <li>Accéder à la BDD de Web app ⇒ Extranet: faire des codes PHP.</li>
+                        <li>Résoudre un beugue sur le code php pour transmettre les factures à format PDF ⇒ Modifier code: boucle if(i) ⇒ $iLigne++; (pour permettre d'afficher les info adresse).</li>
+                    </ul>
+                </div>
+        
+                <div>
+                    <h3>02/06/2023</h3>
+                    <ul>
+                        <li>Accéder à une BDD de Test pou s'entrainer sur les codes php et les requêtes.</li>
+                        <li>Donner une explication globale concernant la structure de site ⇒ affichage filtre (date, nom) et tableau avec tous les colonnes BDD.</li>
+                        <li>Ajouter une colonne de sélection sur la table (Html, Css) et afficher un message quand on clique sur les coches(Js).</li>
+                        <li>Sélectionner tout ou une seule coche(Jquery).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+        
+        <div id="week2" style="display: none;">
+         <div class="report-section1">
+                <h1>Rapport de Stage - deuxième semaine (05/06/2023 - 09/06/2023)</h1>
+            <div>
+                <h3>05/06/2023</h3>
+                <p>Terminer la fonction qui coche ou decoche tous les choix en tableau:</p>
+            </div>
+    
+            <div>
+                <h3>06/06/2023</h3>
+                <ul>
+                    <li>Afficher idList en tableau (array) de tous les checkbox coché.</li>
+                    <li>Charger la mise en page Excel ⇒ tableau (colonnes, Data SQL “lignes”) en code php</li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>07/06/2023</h3>
+                <ul>
+                    <li>Terminer la tache: modification de tableau et affichage des lignes repetée sur une seule ligne.</li>
+                    <li>Changer les dimensions du tableau (XML).</li>
+                    
+                </ul>
+            </div>
+    
+            <div>
+                <h3>08/06/2023</h3>
+                <ul>
+                    <li>Explication de regroupement en seule ligne</li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>09/06/2023</h3>
+                <ul>
+                    <li>Faire des requêtes avec Symfony(Doctrine)</li>
+                </ul>
+            </div>
+           </div>
+         </div>
+        </div>
+
+        
+        <div id="week3" style="display: none;">
+            <div class="report-section1">
+                <h1>Rapport de Stage - troisième semaine (12/05/2023 - 16/06/2023)</h1>
+            <div>
+                <h3>12/06/2023</h3>
+                <p>Faire des recherches pour trouver la methode qui peut afficher les dates (SYMFONY)</p>
+            </div>
+    
+            <div>
+                <h3>13/06/2023</h3>
+                <ul>
+                    <li>Expliquer la méthode que je peux faire en symfony Doctrine pour trouver les dates ⇒ function getBefore()</li>
+                    <li>Découvrir les étapes de production de a-z.</li>
+                    <li>Trouver le problème qui fait l'erreur:
+                        ⇒ Les commandes davant 6 mois</li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>14/06/2023</h3>
+                <ul>
+                    <li>Faire Update vers BDD ⇒ $commandeRepository→ add($commande)</li>
+                    <li>Ajouter une colonne à travers console Symfony à BDD pour contrôler les champs anonymiser ou pas.</li>
+                    <li>Faire des requêtes MySql pour afficher un tableau de stock.</li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>15/06/2023</h3>
+                <ul>
+                    <li>Terminer à faire des requetes SQL pour afficher sur le tableau “array” le prix d'unité hors tax:<br>
+                        ⇒ $refList[$row→AR-Ref]→puht = $row→AR-Prix; ⇒ OBJET + INDEX + COL + DATA_AFFICHER</li>
+                    <li>Afficher tableau 'Stock' après choisir en “filtrer” ⇒ HTML: calculer valeur stock + total en haut du tableau.
+                    </li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>16/06/2023</h3>
+                <ul>
+                    <li>Créer un filtre de “qualité”⇒ matière première.</li>
+                    <li>Afficher le filtre quand on clique sur “stocks” et masquer le filtre “Année”.</li>
+                    <li>Modifier la requête SQL pour afficher les filtres correctes “Qualité”.</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        
+        <div id="week4" style="display: none;">
+            <div class="report-section1">
+                <h1>Rapport de Stage - quatrième semaine (19/06/2023 - 23/06/2023)</h1>
+            <div>
+                <h3>19/06/2023</h3>
+                <p>Créer un nouveau filtre en colonne designation qui permet d'afficher les “Gamme Zero”.</p>
+            </div>
+    
+            <div>
+                <h3>20/06/2023</h3>
+                <ul>
+                    <li>Ajouter la fonction “empty” pour verifier si le tableau MySQL est vide ou pas ⇒ if(!empty($refList))</li>
+                    <li>Ajouter une autre liste “client” pour filtrer les clients ⇒ afficher les resultats par “id_client”</li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>21/06/2023</h3>
+                <ul>
+                    <li>Pour exécuter une requête SQL ⇒ $result = musqli_query(RS::getConnection(),$sql)</li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>22/06/2023</h3>
+                <ul>
+                    <li>Terminer la requête SQL et trouver une solution pour afficher 2 references sur une seule ligne pour chaque commande</li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>23/06/2023</h3>
+                <ul>
+                    <li>Terminer le stage à cause d'un problème de retard le matin.</li>
+                </ul>
+            </div>
+        </div>
+        </div>
     </div>
+
+    
+
+    
+    </section>
+
+    
+
+    <script>
+        function toggleContent(weekId) {
+            // Vérifier quelle semaine est choisie
+            if (weekId === 'week1') {
+                document.getElementById('week1').style.display = 'block';
+                document.getElementById('week2').style.display = 'none';
+                document.getElementById('week3').style.display = 'none';
+                document.getElementById('week4').style.display = 'none';
+            } else if (weekId === 'week2') {
+                document.getElementById('week1').style.display = 'none';
+                document.getElementById('week2').style.display = 'block';
+                document.getElementById('week3').style.display = 'none';
+                document.getElementById('week4').style.display = 'none';
+            } else if (weekId === 'week3') {
+                document.getElementById('week1').style.display = 'none';
+                document.getElementById('week2').style.display = 'none';
+                document.getElementById('week3').style.display = 'block';
+                document.getElementById('week4').style.display = 'none';
+            } else if (weekId === 'week4') {
+                document.getElementById('week1').style.display = 'none';
+                document.getElementById('week2').style.display = 'none';
+                document.getElementById('week3').style.display = 'none';
+                document.getElementById('week4').style.display = 'block';
+            }
+            else {
+                document.getElementById('week1').style.display = 'none';
+                document.getElementById('week2').style.display = 'none';
+                document.getElementById('week3').style.display = 'none';
+                document.getElementById('week4').style.display = 'none';
+            }
+        }
+           
+        
+    </script>
 </body>
 </html>

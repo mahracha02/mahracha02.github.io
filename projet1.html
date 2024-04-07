@@ -5,7 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="portfolio.css">
     <title>Mon Portfolio</title>
-    
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-dTvee9YLb7AgnQwO5e0BBP3fJl/TWJ0I3s1GIZsR/u4D5qJIKUpfVkN7wbdAiSXE" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href=" https://cdn.jsdelivr.net/npm/swiper@11.1.0/swiper-bundle.min.css " rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <header class="header">
@@ -14,8 +24,16 @@
         
         <a href="index.html #apropos">À propos</a>
         <a href="index.html #stages">Stages</a>
-        <a href="index.html #projets">Projets</a>
-        <a href="index.html #projetperso">Projets personnels</a>
+        <div class="dropdown">
+            <a class="dropdown-toggle" href="#" role="button" id="projetsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Projets
+            </a>
+            <div class="dropdown-menu bg-dark" aria-labelledby="projetsDropdown">
+                <a class="dropdown-item text-dark bg-white" href="index.html #projetAnnee1">1ère année</a>
+                <a class="dropdown-item text-dark bg-white" href="index.html #projetAnnee2">2ème année</a>
+            </div>
+        </div>
+        <a href="index.html #competences">Compétences</a>
         <a href="index.html #veilleTech">Veille Tech</a>
         <a href="index.html #contact">Contact</a>
         
@@ -58,5 +76,11 @@
         </footer>
     </div>
     
+    <!--swiper JS-->
+    <script src="js/swiper-bundle.min.js"></script>
+
+
+    <!-- JavaScript-->
+    <script src="js/script.js"></script>
     </body>
     </html>
