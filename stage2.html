@@ -42,46 +42,172 @@
     </header>
     
     <style>
-        .social-icons {
-            display: flex;
-            gap: 10px;
-        }
-
-        .social-icons a {
-            color: #333; /* Couleur des icônes */
-            font-size: 24px; /* Taille des icônes */
-            text-decoration: none;
-        }
-
-        .social-icons a:hover {
-            color: #007BFF; /* Couleur au survol des icônes */
-        }
-        /* Styles pour le conteneur div */
-        div {
-        display: flex; /* Utilisation d'un modèle de boîte flexible pour aligner les images horizontalement */
-        justify-content: space-around; /* Espace équitable entre les éléments enfants */
-        align-items: center; /* Centre les éléments enfants verticalement */
-        padding: 20px; /* Ajoute un espacement intérieur pour plus de lisibilité */
-        background-color: #f8f8f8; /* Couleur de fond du conteneur */
-        border: 1px solid #ddd; /* Bordure du conteneur */
-        border-radius: 8px; /* Coins arrondis */
-        }
-
         /* Styles pour les images à l'intérieur du conteneur div */
-        div img {
-        margin-top: 50px;
-        width: 800px; 
-        height: 800px; 
+        div img {            
+        margin-top: 100px;
+        margin-right: 200px;
+        width: 500px; 
+        height: 500px; 
         border-radius: 4px; /* Coins arrondis pour les images */
         }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .stage-info-title {
+            font-size: 28px; /* Taille de la police */
+            font-weight: bold; /* Gras */
+            color: #333; /* Couleur du texte */
+            text-align: center; /* Alignement centré */
+            margin-bottom: 20px; /* Marge en bas pour l'espace */
+            text-transform: uppercase; /* Convertit le texte en majuscules */
+            letter-spacing: 1px; /* Espacement entre les lettres */
+        }
+
+
+        .section1 {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007BFF;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        .report-section {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .report-section h4 {
+            color: #007BFF;
+            cursor: pointer;
+        }
+
+        .report-section1 h1 {
+        color: #007BFF;
+        }
+
+        .report-section1 h3 {
+            color:red;
+            margin-top: 10px;
+        }
+
+        .report-section1 ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .report-section1 ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Initial hide for week content */
+        .week-content {
+            display: none;
+        }
+        
+
+        
+
+        /* Ajouter le style pour le bouton actif si nécessaire */
+        .week-button.active {
+            background-color: #004080;
+        }
+
+        .swiper-container {
+            background: linear-gradient(to bottom, #f0f0f0, #c0c0c0); /* Choisissez les couleurs pour le dégradé */
+        } 
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            width: 3000px;
+            max-height: 100%;
+            border: 4px solid #000; /* Couleur et épaisseur de la bordure */
+            border-radius: 8px; /* Bord arrondi */
+            margin: auto; /* Centrer l'image horizontalement */
+        }
+
     </style>
-    <div>
-        <img src="photos/3IL.png" alt="3IL" class="3IL">
+    
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="photos/3IL.png" alt="broussaud-logo" class="broussaud-logo"></div>
+            <div class="swiper-slide"><img src="photos/banner_actu-3iL.jpg" alt="broussaud1" class="broussaud1"></div>
+            <!-- Ajoutez d'autres diapositives au besoin -->
+        </div>
+        <!-- Si vous souhaitez ajouter la pagination -->
+        <div class="swiper-pagination-photo"></div>
     </div>
 
 
 
-    <h2>Informations sur le stage</h2>
+    <h2 class="text-center mb-4 mt-6 stage-info-title">Informations sur le stage de 2ème année</h2>
+
+
 
     <table>
         <tr>
@@ -126,12 +252,14 @@
     <div class="report-section">
         <h3>Rapport de Stage</h3>
 
-        <div class="week-buttons">
-            <button class="week-button active" onclick="toggleContent('week1')">1ère Semaine</button>
-            <button class="week-button" onclick="toggleContent('week2')">2ème Semaine</button>
-            <button class="week-button" onclick="toggleContent('week3')">3ème Semaine</button>
-            <button class="week-button" onclick="toggleContent('week4')">4ème Semaine</button>
+        <div class="btn-group week-buttons mt-6 d-flex justify-content-center" role="group" aria-label="Week Buttons">
+            <button type="button" class="week-button btn btn-outline-primary active" onclick="toggleContent('week1')" data-week="week1">1ère Semaine</button>
+            <button type="button" class="week-button btn btn-outline-primary" onclick="toggleContent('week2')" data-week="week2">2ème Semaine</button>
+            <button type="button" class="week-button btn btn-outline-primary" onclick="toggleContent('week3')" data-week="week3">3ème Semaine</button>
+            <button type="button" class="week-button btn btn-outline-primary" onclick="toggleContent('week4')" data-week="week4">4ème Semaine</button>
         </div>
+    </div>
+        
 
         
         <div id="week1" style="display: none;">
@@ -324,43 +452,219 @@
     
 
     
-    </section>
+    </section><br><br>
+
+    <!-- Footer -->
+    <footer
+    class="text-center text-lg-start text-white"
+    style="background-color: #1c2331"
+    >
+
+
+<!-- Section: Links  -->
+<section class="">
+<div >
+  <!-- Grid row -->
+  <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold">Développeur ABDELHAKIM</h6>
+            <hr
+                class="mb-4 mt-2 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+                Le developpement web est un domaine qui me passionne depuis longtemps, je suis très motivé et je suis prêt à relever tous les défis.
+                Ce site web est un exemple de mon travail, vous pouvez voir mes compétences et mes projets.
+            </p>
+        </div>
+        <!-- Grid column -->
+    
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+        <!-- Links -->
+        <h6 class="text-uppercase fw-bold">Languages</h6>
+        <hr
+            class="mb-4 mt-2 d-inline-block mx-auto"
+            style="width: 60px; background-color: #7c4dff; height: 2px"
+            />
+            <p>
+                <a href="#!" class="text-white">HTML</a>
+            </p>
+            <p>
+                <a href="#!" class="text-white">CSS</a>
+            </p>
+            <p>
+                <a href="#!" class="text-white">PHP</a>
+            </p>
+            <p>
+                <a href="#!" class="text-white">JAVA</a>
+            </p>
+            <p>
+                <a href="#!" class="text-white">SYMFONY</a>
+            </p>
+            <p>
+                <a href="#!" class="text-white">JAVASCRIPT</a>
+            </p>
+            <p>
+                <a href="#!" class="text-white">MYSQL</a>
+            </p>
+            <p>
+                <a href="#!" class="text-white">Bootstrap</a>
+            </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+        <!-- Links -->
+        <h6 class="text-uppercase fw-bold">Contact</h6>
+        <hr
+            class="mb-4 mt-2 d-inline-block mx-auto"
+            style="width: 60px; background-color: #7c4dff; height: 2px"
+            />
+        <p><i class="fas fa-home mr-3"></i> 39B rue Camille Guérin, 87000 Limoges</p>
+        <p><i class="fas fa-envelope mr-3"></i> abdelhakim22mahracha@gmail.com</p>
+        <p><i class="fas fa-phone mr-3"></i> +33 652 04 99 43</p>
+        <p><i class="fas fa-link mr-3"></i> linkdin.com</p>
+        </div>
+        <!-- Grid column -->
+
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-md-0 mb-4">
+            <h6 class="text-uppercase font-weight-bold">Suivez-moi</h6>
+            <hr
+                class="mb-4 mt-2 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+                <!-- Facebook -->
+                <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #3b5998"
+                href="#!"
+                role="button"
+                ><i class="fab fa-facebook-f"></i
+                ></a>
+    
+                <!-- Twitter -->
+                <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #55acee"
+                href="#!"
+                role="button"
+                ><i class="fab fa-twitter"></i
+                ></a>
+    
+                <!-- Instagram -->
+                <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #ac2bac"
+                href="#!"
+                role="button"
+                ><i class="fab fa-instagram"></i
+                ></a>
+    
+                <!-- Linkedin -->
+                <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #0082ca"
+                href="#!"
+                role="button"
+                ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <!-- Github -->
+                <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #333333"
+                href="#!"
+                role="button"
+                ><i class="fab fa-github"></i
+                ></a>
+            </p>
+        </div>
+        </div>
+  <!-- Grid row -->
+</div>
+</section>
+<!-- Section: Links  -->
+
+<!-- Copyright -->
+<div
+   class="text-center p-3"
+   style="background-color: rgba(0, 0, 0, 0.2)"
+   >
+© 2024 Copyright:
+<a class="text-white" href="index.html"
+   >ABDELHAKIM</a
+  >
+</div>
+<!-- Copyright -->
+</footer>
+<!-- Footer -->
 
     
 
     <script>
         function toggleContent(weekId) {
-            // Vérifier quelle semaine est choisie
-            if (weekId === 'week1') {
-                document.getElementById('week1').style.display = 'block';
-                document.getElementById('week2').style.display = 'none';
-                document.getElementById('week3').style.display = 'none';
-                document.getElementById('week4').style.display = 'none';
-            } else if (weekId === 'week2') {
-                document.getElementById('week1').style.display = 'none';
-                document.getElementById('week2').style.display = 'block';
-                document.getElementById('week3').style.display = 'none';
-                document.getElementById('week4').style.display = 'none';
-            } else if (weekId === 'week3') {
-                document.getElementById('week1').style.display = 'none';
-                document.getElementById('week2').style.display = 'none';
-                document.getElementById('week3').style.display = 'block';
-                document.getElementById('week4').style.display = 'none';
-            } else if (weekId === 'week4') {
-                document.getElementById('week1').style.display = 'none';
-                document.getElementById('week2').style.display = 'none';
-                document.getElementById('week3').style.display = 'none';
-                document.getElementById('week4').style.display = 'block';
-            }
-            else {
-                document.getElementById('week1').style.display = 'none';
-                document.getElementById('week2').style.display = 'none';
-                document.getElementById('week3').style.display = 'none';
-                document.getElementById('week4').style.display = 'none';
-            }
-        }
+    // Vérifier quelle semaine est choisie
+    if (weekId === 'week1') {
+        document.getElementById('week1').style.display = 'block';
+        document.getElementById('week2').style.display = 'none';
+        document.getElementById('week3').style.display = 'none';
+        document.getElementById('week4').style.display = 'none';
+        // Ajouter la classe active au bouton de la semaine sélectionnée
+        document.querySelectorAll('.week-button').forEach(button => {
+            button.classList.remove('active');
+        });
+        document.querySelector('.week-button[data-week="week1"]').classList.add('active');
+    } else if (weekId === 'week2') {
+        document.getElementById('week1').style.display = 'none';
+        document.getElementById('week2').style.display = 'block';
+        document.getElementById('week3').style.display = 'none';
+        document.getElementById('week4').style.display = 'none';
+        // Ajouter la classe active au bouton de la semaine sélectionnée
+        document.querySelectorAll('.week-button').forEach(button => {
+            button.classList.remove('active');
+        });
+        document.querySelector('.week-button[data-week="week2"]').classList.add('active');
+    } else if (weekId === 'week3') {
+        document.getElementById('week1').style.display = 'none';
+        document.getElementById('week2').style.display = 'none';
+        document.getElementById('week3').style.display = 'block';
+        document.getElementById('week4').style.display = 'none';
+        // Ajouter la classe active au bouton de la semaine sélectionnée
+        document.querySelectorAll('.week-button').forEach(button => {
+            button.classList.remove('active');
+        });
+        document.querySelector('.week-button[data-week="week3"]').classList.add('active');
+    } else if (weekId === 'week4') {
+        document.getElementById('week1').style.display = 'none';
+        document.getElementById('week2').style.display = 'none';
+        document.getElementById('week3').style.display = 'none';
+        document.getElementById('week4').style.display = 'block';
+        // Ajouter la classe active au bouton de la semaine sélectionnée
+        document.querySelectorAll('.week-button').forEach(button => {
+            button.classList.remove('active');
+        });
+        document.querySelector('.week-button[data-week="week4"]').classList.add('active');
+    } else {
+        document.getElementById('week1').style.display = 'none';
+        document.getElementById('week2').style.display = 'none';
+        document.getElementById('week3').style.display = 'none';
+        document.getElementById('week4').style.display = 'none';
+    }
+}  
            
         
     </script>
+
+    <!-- swiper JS-->
+    <script src="js/swiper-bundle.min.js"></script>
+
+
+    <!-- JavaScript-->
+    <script src="js/script.js"></script>
 </body>
 </html>

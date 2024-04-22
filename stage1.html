@@ -74,8 +74,18 @@
             color: #333;
         }
 
+        .stage-info-title {
+            font-size: 28px; /* Taille de la police */
+            font-weight: bold; /* Gras */
+            color: #333; /* Couleur du texte */
+            text-align: center; /* Alignement centré */
+            margin-bottom: 20px; /* Marge en bas pour l'espace */
+            text-transform: uppercase; /* Convertit le texte en majuscules */
+            letter-spacing: 1px; /* Espacement entre les lettres */
+        }
+
         .section1 {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
             background-color: #fff;
             padding: 20px;
@@ -153,35 +163,46 @@
         .week-content {
             display: none;
         }
-        
-
-        .week-button {
-            background-color: #007BFF;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .week-button:hover {
-            background-color: #0056b3;
-        }
 
         /* Ajouter le style pour le bouton actif si nécessaire */
         .week-button.active {
             background-color: #004080;
         }
 
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            width: 1000px;
+            max-height: 100%;
+            border: 4px solid #000; /* Couleur et épaisseur de la bordure */
+            border-radius: 8px; /* Bord arrondi */
+            margin: auto; /* Centrer l'image horizontalement */
+        }
+
+        .swiper-container {
+            background: linear-gradient(to bottom, #f0f0f0, #c0c0c0); /* Choisissez les couleurs pour le dégradé */
+        }
+
+
     </style>
 
-    <div class="images">
-        <img src="photos/broussaud-logo.jpeg" alt="broussaud-logo" class="broussaud-logo">
-        <img src="photos/Broussaud-usine.jpg" alt="broussaud1" class="broussaud1">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="photos/broussaud-logo.jpeg" alt="broussaud-logo" class="broussaud-logo"></div>
+            <div class="swiper-slide"><img src="photos/Broussaud-usine.jpg" alt="broussaud1" class="broussaud1"></div>
+            <!-- Ajoutez d'autres diapositives au besoin -->
+        </div>
+        <!-- Si vous souhaitez ajouter la pagination -->
+        <div class="swiper-pagination-photo"></div>
     </div>
+
     <br><br>
 
-    <title>Informations sur le stage</title>
+    <h2 class="text-center mb-4 mt-2 stage-info-title">Informations sur le stage de 1ère année</h2>
     
 </head>
 <body>
@@ -211,7 +232,7 @@
         </tr>
     </table><br><br>
 
-    <section class="section1">
+    <section class="section1" weight="100%">
         <h2>Objectifs du stage</h2>
         <p>Le stage a pour objectif de me faire découvrir le monde du travail et de me faire appliquer les connaissances acquises en cours.</p>
         <h1>Sommaire</h1><br>
@@ -236,12 +257,15 @@
     <div class="report-section">
         <h3>Rapport de Stage</h3>
 
-        <div class="week-buttons">
-            <button class="week-button active" onclick="toggleContent('week1')">1ère Semaine</button>
-            <button class="week-button" onclick="toggleContent('week2')">2ème Semaine</button>
-            <button class="week-button" onclick="toggleContent('week3')">3ème Semaine</button>
-            <button class="week-button" onclick="toggleContent('week4')">4ème Semaine</button>
+        <div class="btn-group week-buttons mt-6 d-flex justify-content-center" role="group" aria-label="Week Buttons">
+            <button type="button" class="week-button btn btn-outline-primary active" onclick="toggleContent('week1')" data-week="week1">1ère Semaine</button>
+            <button type="button" class="week-button btn btn-outline-primary" onclick="toggleContent('week2')" data-week="week2">2ème Semaine</button>
+            <button type="button" class="week-button btn btn-outline-primary" onclick="toggleContent('week3')" data-week="week3">3ème Semaine</button>
+            <button type="button" class="week-button btn btn-outline-primary" onclick="toggleContent('week4')" data-week="week4">4ème Semaine</button>
         </div>
+    </div>
+        
+        
 
         
         <div id="week1" style="display: none;">
@@ -299,179 +323,356 @@
 
         
         <div id="week2" style="display: none;">
-         <div class="report-section1">
+            <div class="report-section1">
                 <h1>Rapport de Stage - deuxième semaine (05/06/2023 - 09/06/2023)</h1>
-            <div>
-                <h3>05/06/2023</h3>
-                <p>Terminer la fonction qui coche ou decoche tous les choix en tableau:</p>
-            </div>
+                <div>
+                    <h3>05/06/2023</h3>
+                    <p>Terminer la fonction qui coche ou decoche tous les choix en tableau:</p>
+                </div>
     
-            <div>
-                <h3>06/06/2023</h3>
-                <ul>
-                    <li>Afficher idList en tableau (array) de tous les checkbox coché.</li>
-                    <li>Charger la mise en page Excel ⇒ tableau (colonnes, Data SQL “lignes”) en code php</li>
-                </ul>
-            </div>
-    
-            <div>
-                <h3>07/06/2023</h3>
-                <ul>
-                    <li>Terminer la tache: modification de tableau et affichage des lignes repetée sur une seule ligne.</li>
-                    <li>Changer les dimensions du tableau (XML).</li>
-                    
-                </ul>
-            </div>
-    
-            <div>
-                <h3>08/06/2023</h3>
-                <ul>
-                    <li>Explication de regroupement en seule ligne</li>
-                </ul>
-            </div>
-    
-            <div>
-                <h3>09/06/2023</h3>
-                <ul>
-                    <li>Faire des requêtes avec Symfony(Doctrine)</li>
-                </ul>
-            </div>
+                <div>
+                    <h3>06/06/2023</h3>
+                    <ul>
+                        <li>Afficher idList en tableau (array) de tous les checkbox coché.</li>
+                        <li>Charger la mise en page Excel ⇒ tableau (colonnes, Data SQL “lignes”) en code php</li>
+                    </ul>
+                </div>
+        
+                <div>
+                    <h3>07/06/2023</h3>
+                    <ul>
+                        <li>Terminer la tache: modification de tableau et affichage des lignes repetée sur une seule ligne.</li>
+                        <li>Changer les dimensions du tableau (XML).</li>
+                        
+                    </ul>
+                </div>
+        
+                <div>
+                    <h3>08/06/2023</h3>
+                    <ul>
+                        <li>Explication de regroupement en seule ligne</li>
+                    </ul>
+                </div>
+        
+                <div>
+                    <h3>09/06/2023</h3>
+                    <ul>
+                        <li>Faire des requêtes avec Symfony(Doctrine)</li>
+                    </ul>
+                </div>
            </div>
-         </div>
         </div>
+        
 
         
         <div id="week3" style="display: none;">
             <div class="report-section1">
                 <h1>Rapport de Stage - troisième semaine (12/05/2023 - 16/06/2023)</h1>
-            <div>
-                <h3>12/06/2023</h3>
-                <p>Faire des recherches pour trouver la methode qui peut afficher les dates (SYMFONY)</p>
-            </div>
+                <div>
+                    <h3>12/06/2023</h3>
+                    <p>Faire des recherches pour trouver la methode qui peut afficher les dates (SYMFONY)</p>
+                </div>
     
-            <div>
-                <h3>13/06/2023</h3>
-                <ul>
-                    <li>Expliquer la méthode que je peux faire en symfony Doctrine pour trouver les dates ⇒ function getBefore()</li>
-                    <li>Découvrir les étapes de production de a-z.</li>
-                    <li>Trouver le problème qui fait l'erreur:
-                        ⇒ Les commandes davant 6 mois</li>
-                </ul>
-            </div>
-    
-            <div>
-                <h3>14/06/2023</h3>
-                <ul>
-                    <li>Faire Update vers BDD ⇒ $commandeRepository→ add($commande)</li>
-                    <li>Ajouter une colonne à travers console Symfony à BDD pour contrôler les champs anonymiser ou pas.</li>
-                    <li>Faire des requêtes MySql pour afficher un tableau de stock.</li>
-                </ul>
-            </div>
-    
-            <div>
-                <h3>15/06/2023</h3>
-                <ul>
-                    <li>Terminer à faire des requetes SQL pour afficher sur le tableau “array” le prix d'unité hors tax:<br>
-                        ⇒ $refList[$row→AR-Ref]→puht = $row→AR-Prix; ⇒ OBJET + INDEX + COL + DATA_AFFICHER</li>
-                    <li>Afficher tableau 'Stock' après choisir en “filtrer” ⇒ HTML: calculer valeur stock + total en haut du tableau.
-                    </li>
-                </ul>
-            </div>
-    
-            <div>
-                <h3>16/06/2023</h3>
-                <ul>
-                    <li>Créer un filtre de “qualité”⇒ matière première.</li>
-                    <li>Afficher le filtre quand on clique sur “stocks” et masquer le filtre “Année”.</li>
-                    <li>Modifier la requête SQL pour afficher les filtres correctes “Qualité”.</li>
-                </ul>
-            </div>
+                <div>
+                    <h3>13/06/2023</h3>
+                    <ul>
+                        <li>Expliquer la méthode que je peux faire en symfony Doctrine pour trouver les dates ⇒ function getBefore()</li>
+                        <li>Découvrir les étapes de production de a-z.</li>
+                        <li>Trouver le problème qui fait l'erreur:
+                            ⇒ Les commandes davant 6 mois</li>
+                    </ul>
+                </div>
+        
+                <div>
+                    <h3>14/06/2023</h3>
+                    <ul>
+                        <li>Faire Update vers BDD ⇒ $commandeRepository→ add($commande)</li>
+                        <li>Ajouter une colonne à travers console Symfony à BDD pour contrôler les champs anonymiser ou pas.</li>
+                        <li>Faire des requêtes MySql pour afficher un tableau de stock.</li>
+                    </ul>
+                </div>
+        
+                <div>
+                    <h3>15/06/2023</h3>
+                    <ul>
+                        <li>Terminer à faire des requetes SQL pour afficher sur le tableau “array” le prix d'unité hors tax:<br>
+                            ⇒ $refList[$row→AR-Ref]→puht = $row→AR-Prix; ⇒ OBJET + INDEX + COL + DATA_AFFICHER</li>
+                        <li>Afficher tableau 'Stock' après choisir en “filtrer” ⇒ HTML: calculer valeur stock + total en haut du tableau.
+                        </li>
+                    </ul>
+                </div>
+        
+                <div>
+                    <h3>16/06/2023</h3>
+                    <ul>
+                        <li>Créer un filtre de “qualité”⇒ matière première.</li>
+                        <li>Afficher le filtre quand on clique sur “stocks” et masquer le filtre “Année”.</li>
+                        <li>Modifier la requête SQL pour afficher les filtres correctes “Qualité”.</li>
+                    </ul>
+                </div>
             </div>
         </div>
-        </div>
+        
 
         
         <div id="week4" style="display: none;">
             <div class="report-section1">
                 <h1>Rapport de Stage - quatrième semaine (19/06/2023 - 23/06/2023)</h1>
-            <div>
-                <h3>19/06/2023</h3>
-                <p>Créer un nouveau filtre en colonne designation qui permet d'afficher les “Gamme Zero”.</p>
-            </div>
+                <div>
+                    <h3>19/06/2023</h3>
+                    <p>Créer un nouveau filtre en colonne designation qui permet d'afficher les “Gamme Zero”.</p>
+                </div>
     
-            <div>
-                <h3>20/06/2023</h3>
-                <ul>
-                    <li>Ajouter la fonction “empty” pour verifier si le tableau MySQL est vide ou pas ⇒ if(!empty($refList))</li>
-                    <li>Ajouter une autre liste “client” pour filtrer les clients ⇒ afficher les resultats par “id_client”</li>
-                </ul>
+                <div>
+                    <h3>20/06/2023</h3>
+                    <ul>
+                        <li>Ajouter la fonction “empty” pour verifier si le tableau MySQL est vide ou pas ⇒ if(!empty($refList))</li>
+                        <li>Ajouter une autre liste “client” pour filtrer les clients ⇒ afficher les resultats par “id_client”</li>
+                    </ul>
+                </div>
+        
+                <div>
+                    <h3>21/06/2023</h3>
+                    <ul>
+                        <li>Pour exécuter une requête SQL ⇒ $result = musqli_query(RS::getConnection(),$sql)</li>
+                    </ul>
+                </div>
+        
+                <div>
+                    <h3>22/06/2023</h3>
+                    <ul>
+                        <li>Terminer la requête SQL et trouver une solution pour afficher 2 references sur une seule ligne pour chaque commande</li>
+                    </ul>
+                </div>
+        
+                <div>
+                    <h3>23/06/2023</h3>
+                    <ul>
+                        <li>Terminer le stage à cause d'un problème de retard le matin.</li>
+                    </ul>
+                </div>
             </div>
-    
-            <div>
-                <h3>21/06/2023</h3>
-                <ul>
-                    <li>Pour exécuter une requête SQL ⇒ $result = musqli_query(RS::getConnection(),$sql)</li>
-                </ul>
-            </div>
-    
-            <div>
-                <h3>22/06/2023</h3>
-                <ul>
-                    <li>Terminer la requête SQL et trouver une solution pour afficher 2 references sur une seule ligne pour chaque commande</li>
-                </ul>
-            </div>
-    
-            <div>
-                <h3>23/06/2023</h3>
-                <ul>
-                    <li>Terminer le stage à cause d'un problème de retard le matin.</li>
-                </ul>
-            </div>
-        </div>
         </div>
     </div>
 
     
 
     
-    </section>
+    </section><br><br>
+
+    <!-- Footer -->
+    <footer
+    class="text-center text-lg-start text-white"
+    style="background-color: #1c2331"
+    >
+
+
+<!-- Section: Links  -->
+<section class="">
+<div >
+  <!-- Grid row -->
+  <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold">Développeur ABDELHAKIM</h6>
+            <hr
+                class="mb-4 mt-2 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+                Le developpement web est un domaine qui me passionne depuis longtemps, je suis très motivé et je suis prêt à relever tous les défis.
+                Ce site web est un exemple de mon travail, vous pouvez voir mes compétences et mes projets.
+            </p>
+        </div>
+        <!-- Grid column -->
+    
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+        <!-- Links -->
+        <h6 class="text-uppercase fw-bold">Languages</h6>
+        <hr
+            class="mb-4 mt-2 d-inline-block mx-auto"
+            style="width: 60px; background-color: #7c4dff; height: 2px"
+            />
+            <p>
+                <a href="#!" class="text-white">HTML</a>
+            </p>
+            <p>
+                <a href="#!" class="text-white">CSS</a>
+            </p>
+            <p>
+                <a href="#!" class="text-white">PHP</a>
+            </p>
+            <p>
+                <a href="#!" class="text-white">JAVA</a>
+            </p>
+            <p>
+                <a href="#!" class="text-white">SYMFONY</a>
+            </p>
+            <p>
+                <a href="#!" class="text-white">JAVASCRIPT</a>
+            </p>
+            <p>
+                <a href="#!" class="text-white">MYSQL</a>
+            </p>
+            <p>
+                <a href="#!" class="text-white">Bootstrap</a>
+            </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+        <!-- Links -->
+        <h6 class="text-uppercase fw-bold">Contact</h6>
+        <hr
+            class="mb-4 mt-2 d-inline-block mx-auto"
+            style="width: 60px; background-color: #7c4dff; height: 2px"
+            />
+        <p><i class="fas fa-home mr-3"></i> 39B rue Camille Guérin, 87000 Limoges</p>
+        <p><i class="fas fa-envelope mr-3"></i> abdelhakim22mahracha@gmail.com</p>
+        <p><i class="fas fa-phone mr-3"></i> +33 652 04 99 43</p>
+        <p><i class="fas fa-link mr-3"></i> linkdin.com</p>
+        </div>
+        <!-- Grid column -->
+
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-md-0 mb-4">
+            <h6 class="text-uppercase font-weight-bold">Suivez-moi</h6>
+            <hr
+                class="mb-4 mt-2 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+                <!-- Facebook -->
+                <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #3b5998"
+                href="#!"
+                role="button"
+                ><i class="fab fa-facebook-f"></i
+                ></a>
+    
+                <!-- Twitter -->
+                <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #55acee"
+                href="#!"
+                role="button"
+                ><i class="fab fa-twitter"></i
+                ></a>
+    
+                <!-- Instagram -->
+                <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #ac2bac"
+                href="#!"
+                role="button"
+                ><i class="fab fa-instagram"></i
+                ></a>
+    
+                <!-- Linkedin -->
+                <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #0082ca"
+                href="#!"
+                role="button"
+                ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <!-- Github -->
+                <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #333333"
+                href="#!"
+                role="button"
+                ><i class="fab fa-github"></i
+                ></a>
+            </p>
+        </div>
+        </div>
+  <!-- Grid row -->
+</div>
+</section>
+<!-- Section: Links  -->
+
+<!-- Copyright -->
+<div
+   class="text-center p-3"
+   style="background-color: rgba(0, 0, 0, 0.2)"
+   >
+© 2024 Copyright:
+<a class="text-white" href="index.html"
+   >ABDELHAKIM</a
+  >
+</div>
+<!-- Copyright -->
+</footer>
+<!-- Footer -->
 
     
 
     <script>
         function toggleContent(weekId) {
-            // Vérifier quelle semaine est choisie
-            if (weekId === 'week1') {
-                document.getElementById('week1').style.display = 'block';
-                document.getElementById('week2').style.display = 'none';
-                document.getElementById('week3').style.display = 'none';
-                document.getElementById('week4').style.display = 'none';
-            } else if (weekId === 'week2') {
-                document.getElementById('week1').style.display = 'none';
-                document.getElementById('week2').style.display = 'block';
-                document.getElementById('week3').style.display = 'none';
-                document.getElementById('week4').style.display = 'none';
-            } else if (weekId === 'week3') {
-                document.getElementById('week1').style.display = 'none';
-                document.getElementById('week2').style.display = 'none';
-                document.getElementById('week3').style.display = 'block';
-                document.getElementById('week4').style.display = 'none';
-            } else if (weekId === 'week4') {
-                document.getElementById('week1').style.display = 'none';
-                document.getElementById('week2').style.display = 'none';
-                document.getElementById('week3').style.display = 'none';
-                document.getElementById('week4').style.display = 'block';
-            }
-            else {
-                document.getElementById('week1').style.display = 'none';
-                document.getElementById('week2').style.display = 'none';
-                document.getElementById('week3').style.display = 'none';
-                document.getElementById('week4').style.display = 'none';
-            }
-        }
+    // Vérifier quelle semaine est choisie
+    if (weekId === 'week1') {
+        document.getElementById('week1').style.display = 'block';
+        document.getElementById('week2').style.display = 'none';
+        document.getElementById('week3').style.display = 'none';
+        document.getElementById('week4').style.display = 'none';
+        // Ajouter la classe active au bouton de la semaine sélectionnée
+        document.querySelectorAll('.week-button').forEach(button => {
+            button.classList.remove('active');
+        });
+        document.querySelector('.week-button[data-week="week1"]').classList.add('active');
+    } else if (weekId === 'week2') {
+        document.getElementById('week1').style.display = 'none';
+        document.getElementById('week2').style.display = 'block';
+        document.getElementById('week3').style.display = 'none';
+        document.getElementById('week4').style.display = 'none';
+        // Ajouter la classe active au bouton de la semaine sélectionnée
+        document.querySelectorAll('.week-button').forEach(button => {
+            button.classList.remove('active');
+        });
+        document.querySelector('.week-button[data-week="week2"]').classList.add('active');
+    } else if (weekId === 'week3') {
+        document.getElementById('week1').style.display = 'none';
+        document.getElementById('week2').style.display = 'none';
+        document.getElementById('week3').style.display = 'block';
+        document.getElementById('week4').style.display = 'none';
+        // Ajouter la classe active au bouton de la semaine sélectionnée
+        document.querySelectorAll('.week-button').forEach(button => {
+            button.classList.remove('active');
+        });
+        document.querySelector('.week-button[data-week="week3"]').classList.add('active');
+    } else if (weekId === 'week4') {
+        document.getElementById('week1').style.display = 'none';
+        document.getElementById('week2').style.display = 'none';
+        document.getElementById('week3').style.display = 'none';
+        document.getElementById('week4').style.display = 'block';
+        // Ajouter la classe active au bouton de la semaine sélectionnée
+        document.querySelectorAll('.week-button').forEach(button => {
+            button.classList.remove('active');
+        });
+        document.querySelector('.week-button[data-week="week4"]').classList.add('active');
+    } else {
+        document.getElementById('week1').style.display = 'none';
+        document.getElementById('week2').style.display = 'none';
+        document.getElementById('week3').style.display = 'none';
+        document.getElementById('week4').style.display = 'none';
+    }
+}  
+
            
         
     </script>
+
+    <!-- swiper JS-->
+    <script src="js/swiper-bundle.min.js"></script>
+
+
+    <!-- JavaScript-->
+    <script src="js/script.js"></script>
     
-    </body>
-    </html>
+</body>
+</html>

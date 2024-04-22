@@ -102,7 +102,7 @@
     
     <div class="content-page">  
             <section class="skills" id="competences" style="background-color: #87CEEB;">
-                <h2>Mes competences</h2>
+                <h2 class="text-3xl font-bold mb-4">Mes competences</h2>
                 <div class="container">
                     <div class="row">
                         <!-- Front-end Skills Card -->
@@ -252,6 +252,48 @@
                     </dl>
                 </div>
             </div>
+
+            <!-- parcours d'études -->
+            <section class="etudes">
+            
+                <div class="container mx-auto p-4">
+                    <h2 class="text-3xl font-bold mb-4">Parcours d'Études</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <!-- Étude 1 -->
+                      <div class="flex items-center mb-8">
+                        <div class="w-16 h-16 rounded-full bg-gray-300 flex items-center justify-center mr-4">
+                          <span class="text-gray-600 text-2xl">BAC</span>
+                        </div>
+                        <div>
+                          <h3 class="text-xl font-semibold mb-2">Baccalauréat Scientifique</h3>
+                          <p class="text-gray-600 mb-2">Établissement: Lycée Arroyo Harnina</p>
+                          <p class="text-gray-600 mb-2">Date: Septembre 20XX - Juin 20XX</p>
+                          <p class="text-gray-700">Description de l'étude: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec nisi eget urna tincidunt vehicula vel vel sem.</p>
+                        </div>
+                      </div>
+                  
+                      <!-- Étude 2 -->
+                      <div class="flex items-center mb-8">
+                        <div class="w-16 h-16 rounded-full bg-gray-300 flex items-center justify-center mr-4">
+                          <span class="text-gray-600 text-2xl">BTS</span>
+                        </div>
+                        <div>
+                          <h3 class="text-xl font-semibold mb-2">Diplôme    BTS SIO Optio Slam</h3>
+                          <p class="text-gray-600 mb-2">Établissement: Lycée Suzanne Valadon</p>
+                          <p class="text-gray-600 mb-2">Date: Septembre 20XX - Juin 20XX</p>
+                          <p class="text-gray-700">Description de l'étude: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec nisi eget urna tincidunt vehicula vel vel sem.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                  
+                  
+            </section>
+              
+              
+              
             
               
             
@@ -260,7 +302,7 @@
                 
         
             <section class="stage" id="stages">
-              <h2>Stages</h2>
+              <h2 class="text-3xl font-bold mb-4">Stages</h2>
                 <div class="content-stage">
                     
                     <div class="box-stage">
@@ -323,7 +365,7 @@
                                 </p>
 
                                 <button class="btnLIre">
-                                    <a href="projet1.html" target="_blank">Voir plus</a>
+                                    <a href="projet1.html" >Voir plus</a>
                                 </button>
 
                             </div>
@@ -348,7 +390,7 @@
                                 </p>
 
                                 <button class="btnLIre">
-                                    <a href="projet3.html" target="_blank">Voir plus</a>
+                                    <a href="projet3.html" >Voir plus</a>
                                 </button>
 
                             </div>
@@ -372,7 +414,7 @@
                                 </p>
 
                                 <button class="btnLIre">
-                                    <a href="projet2.html" target="_blank">Voir plus</a>
+                                    <a href="projet2.html" >Voir plus</a>
                                 </button>
 
                             </div>
@@ -417,7 +459,7 @@
                                 </p>
 
                                 <button class="btnLIre">
-                                    <a href="projet1.html" target="_blank">Voir plus</a>
+                                    <a href="projet1.html" >Voir plus</a>
                                 </button>
 
                             </div>
@@ -484,7 +526,7 @@
 
             <section class="projetsperso" id="projetperso" style="display: none;">
                 <div class="content-projetsperso">
-                    <h2>Projet personnels</h2>
+                    <h2 class="text-3xl font-bold mb-4">Projet personnels</h2>
                     <div class="projet2">
                         <div class="box-projet">
                             <a href="#"><h3>PROJET N°1</h3></a>
@@ -500,7 +542,7 @@
 
             <section class="veilleTech" id="veilleTech">
                 <div class="content-veilleTech">
-                    <h2>Veille Thechnologie</h2>
+                    <h2 class="text-3xl font-bold mb-4">Veille Thechnologie</h2>
                     <section class="case-study">
                         <div class="container">
                           <div class="row">
@@ -508,6 +550,7 @@
                               <h4 class="sub-heading">EXCLUSIF</h4>
                               <h1 class="heading purple"><span class="purple">2023:</span> Voici <br>Les 5 grandes tendances technologiques</h1>
                               <!-- Swiper -->
+                            <div class="slide-contenu">
                               <div class="swiper-container client-swiper">
                                 <div class="swiper-wrapper">
                                   <div class="swiper-slide client-box">
@@ -604,13 +647,14 @@
                                 </div>
                                <div class="swiper-button-prev swiper-navBtn"></div>
                                <div class="swiper-button-next swiper-navBtn"></div>
-                               <div class="swiper-pagination text-center"></div>  
+                               <div class="swiper-pagination-veille text-center"></div>  
                               </div>
 
                               <!-- Contenu caché -->
                               
                                   
                             </div>
+                            
                             
                             
 
@@ -620,34 +664,37 @@
                             </div>
                           </div>
                         </div>
-                      </section>
+                    </section>
+                      
 
-                      <section class="relative overflow-hidden bg-gradient-to-b from-white to-indigo-500 px-6 py-24 sm:py-32 lg:px-8">
-                        <div class="absolute inset-0 bg-white opacity-20"></div>
-                        <div class="mx-auto max-w-2xl lg:max-w-4xl relative z-10">
-                          <img class="mx-auto h-12" src="https://tailwindui.com/img/logos/workcation-logo-indigo-600.svg" alt="Logo">
-                          <figure class="mt-10">
-                            <blockquote class="text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
-                              <p>“Je vous aide à concrétiser vos idées numériques en solutions Web innovantes.”</p>
-                            </blockquote>
-                            <figcaption class="mt-10">
-                              <img class="mx-auto h-10 w-10 rounded-full" src="photos/developer.png" alt="Photo de profil">
-                              <div class="mt-4 flex items-center justify-center space-x-3 text-base">
-                                <div class="font-semibold text-white">MAHRACHA ABDELHAKIM</div>
-                                <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-white">
-                                  <circle cx="1" cy="1" r="1" />
-                                </svg>
-                                <div class="text-gray-200">Développeur Web</div>
-                              </div>
-                            </figcaption>
-                          </figure>                          
-                        </div>
-                      </section>
+                      
                       
                     
 
                 </div>
             </section>
+
+            <section class="relative overflow-hidden bg-gradient-to-b from-white to-indigo-500 px-6 py-24 sm:py-32 lg:px-8">
+                <div class="absolute inset-0 bg-white opacity-20"></div>
+                <div class="mx-auto max-w-2xl lg:max-w-4xl relative z-10">
+                  <img class="mx-auto h-12" src="https://tailwindui.com/img/logos/workcation-logo-indigo-600.svg" alt="Logo">
+                  <figure class="mt-10">
+                    <blockquote class="text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
+                      <p>“Je vous aide à concrétiser vos idées numériques en solutions Web innovantes.”</p>
+                    </blockquote>
+                    <figcaption class="mt-10">
+                      <img class="mx-auto h-10 w-10 rounded-full" src="photos/developer.png" alt="Photo de profil">
+                      <div class="mt-4 flex items-center justify-center space-x-3 text-base">
+                        <div class="font-semibold text-white">MAHRACHA ABDELHAKIM</div>
+                        <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-white">
+                          <circle cx="1" cy="1" r="1" />
+                        </svg>
+                        <div class="text-gray-200">Développeur Web</div>
+                      </div>
+                    </figcaption>
+                  </figure>                          
+                </div>
+              </section>
             
             <section class="contact" id="contact">
                 <div class="container">

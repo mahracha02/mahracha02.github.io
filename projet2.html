@@ -4,16 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-dTvee9YLb7AgnQwO5e0BBP3fJl/TWJ0I3s1GIZsR/u4D5qJIKUpfVkN7wbdAiSXE" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href=" https://cdn.jsdelivr.net/npm/swiper@11.1.0/swiper-bundle.min.css " rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Mon Portfolio</title>
+    
     
 </head>
 <body>
     <header class="header">
-        <a href="index.html" class="logo"> ABDELHAKIM</a>
+        <a href="index.html class="logo"> ABDELHAKIM</a>
      <nav class="navbar">
         
-            <a href="index.html #apropos">À propos</a>
-            <a href="index.html #stages">Stages</a>
+            <a href="#apropos">À propos</a>
+            <a href="#stages">Stages</a>
             <div class="dropdown">
                 <a class="dropdown-toggle" href="#" role="button" id="projetsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Projets
@@ -23,32 +34,15 @@
                     <a class="dropdown-item text-dark bg-white" href="#projetAnnee2">2ème année</a>
                 </div>
             </div>
-            <a href="index.html #competences">Compétences</a>
-            <a href="index.html #veilleTech">Veille Tech</a>
-            <a href="index.html #contact">Contact</a>
+            <a href="#competences">Compétences</a>
+            <a href="#veilleTech">Veille Tech</a>
+            <a href="#contact">Contact</a>
         
         
      </nav>   
     </header>
     <style>
-        /* Styles pour le conteneur div */
-        div {
-        display: flex; /* Utilisation d'un modèle de boîte flexible pour aligner les images horizontalement */
-        justify-content: space-around; /* Espace équitable entre les éléments enfants */
-        align-items: center; /* Centre les éléments enfants verticalement */
-        padding: 20px; /* Ajoute un espacement intérieur pour plus de lisibilité */
-        background-color: #f8f8f8; /* Couleur de fond du conteneur */
-        border: 1px solid #ddd; /* Bordure du conteneur */
-        border-radius: 8px; /* Coins arrondis */
-        }
-
-        /* Styles pour les images à l'intérieur du conteneur div */
-        div img {
-        margin-top: 100px;
-        width: 500px; 
-        height: 500px; 
-        border-radius: 4px; /* Coins arrondis pour les images */
-        }
+        
     </style>
 
     <div>
@@ -59,16 +53,154 @@
         <img src="photos/seminaire5.png" alt="seminaire5" class="seminaire5">
     </div>
 
-    <div class="container">
-        <footer class="footer">       
-            <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="#">ABDELHAKIM</a></p>
-            <div class="social-icons">
-                <a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            </div>
-        </footer>
-    </div>
+    <!-- Footer -->
+    <footer
+    class="text-center text-lg-start text-white"
+    style="background-color: #1c2331" >
+
+
+<!-- Section: Links  -->
+<section class="">
+<div >
+  <!-- Grid row -->
+  <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold">Développeur ABDELHAKIM</h6>
+            <hr
+                class="mb-4 mt-2 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+                Le developpement web est un domaine qui me passionne depuis longtemps, je suis très motivé et je suis prêt à relever tous les défis.
+                Ce site web est un exemple de mon travail, vous pouvez voir mes compétences et mes projets.
+            </p>
+        </div>
+        <!-- Grid column -->
+    
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+        <!-- Links -->
+        <h6 class="text-uppercase fw-bold">Languages</h6>
+        <hr
+            class="mb-4 mt-2 d-inline-block mx-auto"
+            style="width: 60px; background-color: #7c4dff; height: 2px"
+            />
+            <p>
+                <a href="#!" class="text-white">HTML</a>
+            </p>
+            <p>
+                <a href="#!" class="text-white">CSS</a>
+            </p>
+            <p>
+                <a href="#!" class="text-white">PHP</a>
+            </p>
+            <p>
+                <a href="#!" class="text-white">JAVA</a>
+            </p>
+            <p>
+                <a href="#!" class="text-white">SYMFONY</a>
+            </p>
+            <p>
+                <a href="#!" class="text-white">JAVASCRIPT</a>
+            </p>
+            <p>
+                <a href="#!" class="text-white">MYSQL</a>
+            </p>
+            <p>
+                <a href="#!" class="text-white">Bootstrap</a>
+            </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+        <!-- Links -->
+        <h6 class="text-uppercase fw-bold">Contact</h6>
+        <hr
+            class="mb-4 mt-2 d-inline-block mx-auto"
+            style="width: 60px; background-color: #7c4dff; height: 2px"
+            />
+        <p><i class="fas fa-home mr-3"></i> 39B rue Camille Guérin, 87000 Limoges</p>
+        <p><i class="fas fa-envelope mr-3"></i> abdelhakim22mahracha@gmail.com</p>
+        <p><i class="fas fa-phone mr-3"></i> +33 652 04 99 43</p>
+        <p><i class="fas fa-link mr-3"></i> linkdin.com</p>
+        </div>
+        <!-- Grid column -->
+
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-md-0 mb-4">
+            <h6 class="text-uppercase font-weight-bold">Suivez-moi</h6>
+            <hr
+                class="mb-4 mt-2 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+                <!-- Facebook -->
+                <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #3b5998"
+                href="#!"
+                role="button"
+                ><i class="fab fa-facebook-f"></i
+                ></a>
+    
+                <!-- Twitter -->
+                <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #55acee"
+                href="#!"
+                role="button"
+                ><i class="fab fa-twitter"></i
+                ></a>
+    
+                <!-- Instagram -->
+                <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #ac2bac"
+                href="#!"
+                role="button"
+                ><i class="fab fa-instagram"></i
+                ></a>
+    
+                <!-- Linkedin -->
+                <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #0082ca"
+                href="#!"
+                role="button"
+                ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <!-- Github -->
+                <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #333333"
+                href="#!"
+                role="button"
+                ><i class="fab fa-github"></i
+                ></a>
+            </p>
+        </div>
+        </div>
+  <!-- Grid row -->
+</div>
+</section>
+<!-- Section: Links  -->
+
+<!-- Copyright -->
+<div
+   class="text-center p-3"
+   style="background-color: rgba(0, 0, 0, 0.2)"
+   >
+© 2024 Copyright:
+<a class="text-white" href="index.html"
+   >ABDELHAKIM</a
+  >
+</div>
+<!-- Copyright -->
+</footer>
+<!-- Footer -->
     
     </body>
     </html>

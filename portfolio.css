@@ -892,5 +892,9 @@ button:hover {
   
 }
 
+.container {
+  overflow-y: hidden;
+}
+
 
 
