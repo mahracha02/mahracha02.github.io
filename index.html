@@ -14,6 +14,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link href=" https://cdn.jsdelivr.net/npm/swiper@11.1.0/swiper-bundle.min.css " rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
     <title>Mon Portfolio</title>
     
     
@@ -255,21 +257,21 @@
 
             <!-- parcours d'études -->
             <section class="etudes">
-            
-                <div class="container mx-auto p-4">
-                    <h2 class="text-3xl font-bold mb-4">Parcours d'Études</h2>
+                <h2 class="text-3xl font-bold mb-4">Parcours d'Études</h2>
+                <div class="container mx-auto p-4">     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <!-- Étude 1 -->
                       <div class="flex items-center mb-8">
                         <div class="w-16 h-16 rounded-full bg-gray-300 flex items-center justify-center mr-4">
                           <span class="text-gray-600 text-2xl">BAC</span>
                         </div>
-                        <div>
-                          <h3 class="text-xl font-semibold mb-2">Baccalauréat Scientifique</h3>
-                          <p class="text-gray-600 mb-2">Établissement: Lycée Arroyo Harnina</p>
-                          <p class="text-gray-600 mb-2">Date: Septembre 20XX - Juin 20XX</p>
-                          <p class="text-gray-700">Description de l'étude: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec nisi eget urna tincidunt vehicula vel vel sem.</p>
+                        <div class="border border-gray-300 shadow-md p-4 rounded-lg">
+                            <h3 class="text-xl font-semibold mb-2">Baccalauréat Scientifique</h3>
+                            <p class="text-gray-600 mb-2"><b>Établissement:</b> Lycée Arroyo Harnina</p>
+                            <p class="text-gray-600 mb-2"><b>Date:</b> Septembre 2019 - Juin 2021</p>
+                            <p class="text-gray-700"><b>Description de l'étude:</b> Le baccalauréat scientifique est un diplôme qui atteste de compétences dans les matières scientifiques telles que les mathématiques, la physique, la chimie et la biologie. Pendant mes années d'études, j'ai développé une compréhension approfondie des concepts scientifiques fondamentaux ainsi que des compétences en résolution de problèmes et en analyse critique.</p>
                         </div>
+                           
                       </div>
                   
                       <!-- Étude 2 -->
@@ -277,12 +279,12 @@
                         <div class="w-16 h-16 rounded-full bg-gray-300 flex items-center justify-center mr-4">
                           <span class="text-gray-600 text-2xl">BTS</span>
                         </div>
-                        <div>
-                          <h3 class="text-xl font-semibold mb-2">Diplôme    BTS SIO Optio Slam</h3>
-                          <p class="text-gray-600 mb-2">Établissement: Lycée Suzanne Valadon</p>
-                          <p class="text-gray-600 mb-2">Date: Septembre 20XX - Juin 20XX</p>
-                          <p class="text-gray-700">Description de l'étude: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec nisi eget urna tincidunt vehicula vel vel sem.</p>
-                        </div>
+                        <div class="border border-gray-300 shadow-md p-4 rounded-lg">
+                            <h3 class="text-xl font-semibold mb-2">Diplôme BTS SIO Optio Slam</h3>
+                            <p class="text-gray-600 mb-2"><b>Établissement: </b>Lycée Suzanne Valadon</p>
+                            <p class="text-gray-600 mb-2"><b>Date:</b> Septembre 2022 - Juin 2024</p>
+                            <p class="text-gray-700"><b>Description de l'étude:</b> Le diplôme BTS Services Informatiques aux Organisations (SIO) avec option Solutions Logicielles et Applications Métiers (SLAM) est axé sur le développement de logiciels et d'applications métier. Pendant ma formation, j'ai acquis des compétences pratiques en développement web, en programmation, en conception de bases de données et en gestion de projets informatiques.</p>
+                        </div>                        
                       </div>
                     </div>
                   </div>
@@ -301,45 +303,68 @@
                 
                 
         
-            <section class="stage" id="stages">
-              <h2 class="text-3xl font-bold mb-4">Stages</h2>
-                <div class="content-stage">
-                    
-                    <div class="box-stage">
-                        <a href="stage1.html"><h3>Stage 1er année Bts Sio Slam</h3></a>
-                        <p>
-                           C'était chez l'entreprise <b>Broussaud</b> Fabricant de chaussettes
-                           <br>
-                           <div class="language">
-                                <i>PHP</i>
-                                <i>MYSQL</i> 
-                                <i>SYMFONY</i>
-                                <i>JAVA</i>
-                                <i>JSON</i>
-                                <i>HTML</i>
-
-                           </div>
-                        </p>
-                    </div>
-                    <div class="box-stage">
-                        <a href="stage2.html"><h3>Stage 2eme année Bts Sio Slam</h3></a>
-                        <p>
-                            C'était chez l'école <b>3IL</b> Institut d'ingénierie informatique de Limoges
-                            <br>
-                            <div class="language">
-                                 <i>PHP</i>
-                                 <i>MYSQL</i> 
-                                 <i>SYMFONY</i>
-                                 <i>JAVA</i>
-                                 <i>JSON</i>
-                                 <i>HTML</i>
-                                
- 
+            <section class="stage py-5" id="stages">
+                <h2 class="text-3xl font-bold mb-4">Stages</h2>
+                <div class="container" style="background-color: transparent; border: none; box-shadow: none;">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card w-100">
+                                <div class="card-body">
+                                    <h3 class="text-primary font-weight-bold mb-4 text-lg"><a href="stage1.html">Stage 1ère année BTS SIO Slam</a></h3> 
+                                    <p class="mb-4 text-lg">C'était chez l'entreprise <b>Broussaud</b>, fabricant de chaussettes.</p> 
+                                    <div class="row">
+                                        <!-- Colonne gauche -->
+                                        <div class="col-md-6">
+                                            <div class="d-flex flex-wrap gap-2">
+                                                <div class="badge badge-info animate__animated animate__fadeInUp w-100 h-100 px-4 py-3">PHP</div>
+                                                <div class="badge badge-info animate__animated animate__fadeInUp w-100 h-100 px-4 py-3">MYSQL</div>
+                                                <div class="badge badge-info animate__animated animate__fadeInUp w-100 h-100 px-4 py-3 mb-4">SYMFONY</div>
+                                            </div>
+                                        </div>
+                                        <!-- Colonne droite -->
+                                        <div class="col-md-6">
+                                            <div class="d-flex flex-wrap gap-2">
+                                                <div class="badge badge-info animate__animated animate__fadeInUp w-100 h-100 px-4 py-3">JAVA</div>
+                                                <div class="badge badge-info animate__animated animate__fadeInUp w-100 h-100 px-4 py-3">JSON</div>
+                                                <div class="badge badge-info animate__animated animate__fadeInUp w-100 h-100 px-4 py-3">HTML</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                         </p>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card w-100">
+                                <div class="card-body">
+                                    <h3 class="text-primary font-weight-bold mb-4 text-lg"><a href="stage2.html">Stage 2ème année BTS SIO Slam</a></h3>
+                                    <p class="mb-4 text-lg">C'était chez l'école <b>3IL</b>, Institut d'ingénierie informatique de Limoges.</p>
+                                    <div class="row">
+                                        <!-- Colonne gauche -->
+                                        <div class="col-md-6">
+                                            <div class="d-flex flex-wrap gap-2">
+                                                <div class="badge badge-info animate__animated animate__fadeInUp w-100 h-100 px-4 py-3">PHP</div>
+                                                <div class="badge badge-info animate__animated animate__fadeInUp w-100 h-100 px-4 py-3">CSV</div>
+                                                <div class="badge badge-info animate__animated animate__fadeInUp w-100 h-100 px-4 py-3 mb-6">CSS</div>
+                                            </div>
+                                        </div>
+                                        <!-- Colonne droite -->
+                                        <div class="col-md-6">
+                                            <div class="d-flex flex-wrap gap-2">
+                                                <div class="badge badge-info animate__animated animate__fadeInUp w-100 h-100 px-4 py-3">JS</div>
+                                                <div class="badge badge-info animate__animated animate__fadeInUp w-100 h-100 px-4 py-3">BOOTSTRAP</div>
+                                                <div class="badge badge-info animate__animated animate__fadeInUp w-100 h-100 px-4 py-3">HTML</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>   
+                </div>
             </section>
+            
+            
+            
             
            
             <div class="slide-container swiper">
@@ -548,7 +573,7 @@
                           <div class="row">
                             <div class="col-md-12">
                               <h4 class="sub-heading">EXCLUSIF</h4>
-                              <h1 class="heading purple"><span class="purple">2023:</span> Voici <br>Les 5 grandes tendances technologiques</h1>
+                              <h1 class="heading purple"><span class="purple">2024:</span> Voici <br>Les 5 grandes tendances technologiques</h1>
                               <!-- Swiper -->
                             <div class="slide-contenu">
                               <div class="swiper-container client-swiper">

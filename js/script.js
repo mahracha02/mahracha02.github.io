@@ -58,16 +58,18 @@ var swiper = new Swiper(".mySwiper", {
     },
   });
 
-  var swiper = new Swiper(".swiper-container", {
-    slidesPerView: "auto",
+
+  var swiper = new Swiper('.client-swiper', {
+    slidesPerView: 1,
     spaceBetween: 25,
     loop: true,
-    autoplay: {
-        delay: 2000, // Définissez la vitesse de défilement (en millisecondes)
-    },
     pagination: {
-        el: ".swiper-pagination-photo",
-        clickable: true,
-        
+      el: ".swiper-pagination-veille",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+
     },
   });
