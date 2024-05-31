@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-dTvee9YLb7AgnQwO5e0BBP3fJl/TWJ0I3s1GIZsR/u4D5qJIKUpfVkN7wbdAiSXE" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href=" https://cdn.jsdelivr.net/npm/swiper@11.1.0/swiper-bundle.min.css " rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Projet Analim</title>
+    
+    
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo"> ABDELHAKIM</a>
+     <nav class="navbar">
+        
+            <a href="#apropos">À propos</a>
+            <a href="#stages">Stages</a>
+            <div class="dropdown">
+                <a class="dropdown-toggle" href="#" role="button" id="projetsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Projets
+                </a>
+                <div class="dropdown-menu bg-dark" aria-labelledby="projetsDropdown">
+                    <a class="dropdown-item text-dark bg-white" href="#projetAnnee1">1ère année</a>
+                    <a class="dropdown-item text-dark bg-white" href="#projetAnnee2">2ème année</a>
+                </div>
+            </div>
+            <a href="#competences">Compétences</a>
+            <a href="#veilleTech">Veille Tech</a>
+            <a href="#contact">Contact</a>
+        
+        
+     </nav>   
+    </header>
+
+
+    <style>
+        
+      footer {
+        
+        padding: 20px 0;
+      }
+       /* Styles pour le conteneur du diaporama */
+      .swiper-container {
+          width: 100%;
+          height: 100%;
+      }
+
+      /* Styles pour chaque diapositive */
+      .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background-color: #f8f9fa; /* Couleur de fond */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+      /* Styles pour les images dans les diapositives */
+      .swiper-slide img {            
+        margin-top: 30px;
+        margin-right: 20px;
+        width: 1700px; 
+        height: 500px; 
+        border-radius: 4px; /* Coins arrondis pour les images */
+        }
+
+      /* Styles pour le survol des diapositives */
+      .swiper-slide:hover {
+          transform: scale(1.05); /* Agrandir la diapositive au survol */
+          transition: transform 0.3s ease; /* Animation fluide */
+      }
+      
+      .stage-info-title, .stage-info-subtitle {
+            animation: fadeInDown 0.8s;
+        }
+        .stage-info-text {
+            animation: fadeInUp 0.8s;
+            margin-top: 1rem;
+            color: #4b5563;
+            line-height: 1.6;
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .container {
+            padding: 2rem;
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .stage-info-subtitle {
+            position: relative;
+            padding-left: 1rem;
+        }
+        .stage-info-subtitle::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 24px;
+            background-color: #4f46e5;
+            border-radius: 2px;
+        }
+        .tech-icons {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .tech-icons img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            justify-content: center;
+        }
+        .btn-custom {
+            background-color: #4f46e5;
+            color: #ffffff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+        .btn-custom:hover {
+            background-color: #ffffff;
+            color: #4f46e5;
+            text-decoration: none;
+            border: 1px solid #4f46e5;
+        }
+        .btn-doc {
+            background-color: #79a7e8;
+            color: #fff;
+            border: 1px solid #4f46e5;
+        }
+        .btn-doc:hover {
+            background-color: #4338ca;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        
+       /* Modal styles */
+       .modal {
+            display: none;
+            position: fixed;
+            z-index: 50;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            max-width: 1500px;
+            height: 750px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        } 
+
+        iframe {
+            width: 100%;
+            border: none;
+            flex-grow: 1;
+        }
+        .download-btn {
+            align-self: flex-end;
+            margin-top: 10px;
+        }
+        .download-btn:hover {
+            background-color: #242153;
+            text-decoration: none;
+        }
+    </style>
+
+    <div class="swiper-container slide-stage">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="photos/analim1.png" height="300"></div>
+        <div class="swiper-slide"><img src="photos/analim2.png" height="300"></div>
+        <div class="swiper-slide"><img src="photos/analim3.png" height="300"></div>
+          <!-- Ajoutez d'autres diapositives au besoin -->
+      </div>
+      <!-- Si vous souhaitez ajouter la pagination -->
+      <div class="swiper-pagination-photo text-center"></div>
+    </div>
+
+    <br><br>
+
+    <div class="container mt-10">
+      <h2 class="text-center mb-4 mt-2 stage-info-title text-3xl font-bold text-indigo-600">Détails du projet:</h2>
+      <div class="row">
+          <div class="col-md-6 mb-8">
+              <h3 class="stage-info-subtitle text-xl font-semibold mb-2">Nom du projet</h3>
+              <p class="stage-info-text text-base">Analim</p>
+              <h3 class="stage-info-subtitle text-xl font-semibold mb-2 mt-4">Description</h3>
+              <p class="stage-info-text text-base">Analim, c'est une application web qui vise à gérer l'organisation du Congrès
+                National des Maisons des Ligues de manière flexible et efficace.
+                Ma mission était de développer la partie de gestion de facturation et de paiement en ligne.
+              </p>
+              <h3 class="stage-info-subtitle text-xl font-semibold mb-2 mt-4">Technologies utilisées</h3>
+              <div class="tech-icons">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/html5.svg" alt="HTML">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/css3.svg" alt="CSS">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/php.svg" alt="PHP">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/mysql.svg" alt="MySQL">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/bootstrap.svg" alt="Bootstrap">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/javascript.svg" alt="JavaScript">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/jquery.svg" alt="jQuery">
+              </div>
+          </div>
+          <div class="col-md-6 mb-8">
+              <h3 class="stage-info-subtitle text-xl font-semibold mb-2">Objectifs</h3>
+              <p class="stage-info-text text-base">Développer une application web pour gérer la facturation et le paiement en ligne.</p>
+              <h3 class="stage-info-subtitle text-xl font-semibold mb-2 mt-4">Résultats</h3>
+              <p class="stage-info-text text-base">J'ai réussi à développer la partie de gestion de facturation et de paiement en ligne.</p>
+              <h3 class="stage-info-subtitle text-xl font-semibold mb-2 mt-4">Durée</h3>
+              <p class="stage-info-text text-base">3 mois</p>
+          </div>
+      </div>
+
+      <div class="flex justify-center mt-8">
+        <a href="#" class="btn-custom btn-doc mr-4" id="openModalBtn">Voir la Documentation</a>
+        <a href="#" class="btn-custom btn-project">Voir le Projet</a>
+      </div>
+    </div>
+    <br><br><br>
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal flex">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 class="text-xl font-semibold mb-4">Documentation</h3>
+            <iframe src="docs/docAnalim.pdf"></iframe>
+            <a href="docs/docAnalim.pdf" class="download-btn mt-4 px-4 py-2 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700" download>Télécharger la Documentation</a>
+        </div>
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+    
+
+    <!-- Footer -->
+    <footer
+    class="text-center text-lg-start text-white"
+    style="background-color: #1c2331"
+    >
+
+
+<!-- Section: Links  -->
+<section class="">
+<div >
+  <!-- Grid row -->
+  <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold">Développeur ABDELHAKIM</h6>
+            <hr
+                class="mb-4 mt-2 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+                Le developpement web est un domaine qui me passionne depuis longtemps, je suis très motivé et je suis prêt à relever tous les défis.
+                Ce site web est un exemple de mon travail, vous pouvez voir mes compétences et mes projets.
+            </p>
+        </div>
+        <!-- Grid column -->
+    
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+        <!-- Links -->
+        <h6 class="text-uppercase fw-bold">Languages</h6>
+        <hr
+            class="mb-4 mt-2 d-inline-block mx-auto"
+            style="width: 60px; background-color: #7c4dff; height: 2px"
+            />
+            <p>
+                <a href="#!" class="text-white">HTML</a>
+            </p>
+            <p>
+                <a href="#!" class="text-white">CSS</a>
+            </p>
+            <p>
+                <a href="#!" class="text-white">PHP</a>
+            </p>
+            <p>
+                <a href="#!" class="text-white">JAVA</a>
+            </p>
+            <p>
+                <a href="#!" class="text-white">SYMFONY</a>
+            </p>
+            <p>
+                <a href="#!" class="text-white">JAVASCRIPT</a>
+            </p>
+            <p>
+                <a href="#!" class="text-white">MYSQL</a>
+            </p>
+            <p>
+                <a href="#!" class="text-white">Bootstrap</a>
+            </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+        <!-- Links -->
+        <h6 class="text-uppercase fw-bold">Contact</h6>
+        <hr
+            class="mb-4 mt-2 d-inline-block mx-auto"
+            style="width: 60px; background-color: #7c4dff; height: 2px"
+            />
+        <p><i class="fas fa-home mr-3"></i> 39B rue Camille Guérin, 87000 Limoges</p>
+        <p><i class="fas fa-envelope mr-3"></i> abdelhakim22mahracha@gmail.com</p>
+        <p><i class="fas fa-phone mr-3"></i> +33 652 04 99 43</p>
+        <p><i class="fas fa-link mr-3"></i> linkdin.com</p>
+        </div>
+        <!-- Grid column -->
+
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-md-0 mb-4">
+            <h6 class="text-uppercase font-weight-bold">Suivez-moi</h6>
+            <hr
+                class="mb-4 mt-2 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+                <!-- Facebook -->
+                <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #3b5998"
+                href="#!"
+                role="button"
+                ><i class="fab fa-facebook-f"></i
+                ></a>
+    
+                <!-- Twitter -->
+                <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #55acee"
+                href="#!"
+                role="button"
+                ><i class="fab fa-twitter"></i
+                ></a>
+    
+                <!-- Instagram -->
+                <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #ac2bac"
+                href="#!"
+                role="button"
+                ><i class="fab fa-instagram"></i
+                ></a>
+    
+                <!-- Linkedin -->
+                <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #0082ca"
+                href="#!"
+                role="button"
+                ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <!-- Github -->
+                <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #333333"
+                href="#!"
+                role="button"
+                ><i class="fab fa-github"></i
+                ></a>
+            </p>
+        </div>
+        </div>
+  <!-- Grid row -->
+</div>
+</section>
+<!-- Section: Links  -->
+
+<!-- Copyright -->
+<div
+   class="text-center p-3"
+   style="background-color: rgba(0, 0, 0, 0.2)"
+   >
+© 2024 Copyright:
+<a class="text-white" href="index.html"
+   >ABDELHAKIM</a
+  >
+</div>
+<!-- Copyright -->
+</footer>
+<!-- Footer -->
+    
+    <!--swiper JS-->
+    <script src="js/swiper-bundle.min.js"></script>
+
+
+    <!-- JavaScript-->
+    <script src="js/script.js"></script>
+
+
+</body>
+</html>
