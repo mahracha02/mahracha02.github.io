@@ -22,20 +22,20 @@
         <a href="index.html" class="logo"> ABDELHAKIM</a>
      <nav class="navbar">
         
-            <a href="#apropos">À propos</a>
-            <a href="#stages">Stages</a>
+            <a href="index.html">À propos</a>
+            <a href="index.html#stages">Stages</a>
             <div class="dropdown">
                 <a class="dropdown-toggle" href="#" role="button" id="projetsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Projets
                 </a>
                 <div class="dropdown-menu bg-dark" aria-labelledby="projetsDropdown">
-                    <a class="dropdown-item text-dark bg-white" href="#projetAnnee1">1ère année</a>
-                    <a class="dropdown-item text-dark bg-white" href="#projetAnnee2">2ème année</a>
+                    <a class="dropdown-item text-dark bg-white" href="index.html#projetAnnee1">1ère année</a>
+                    <a class="dropdown-item text-dark bg-white" href="index.html#projetAnnee2">2ème année</a>
                 </div>
             </div>
             <a href="index.html #competences">Compétences</a>
-            <a href="#veilleTech">Veille Tech</a>
-            <a href="#contact">Contact</a>
+            <a href="index.html#veilleTech">Veille Tech</a>
+            <a href="index.html#contact">Contact</a>
         
         
      </nav>   
@@ -190,6 +190,56 @@
             margin: auto; /* Centrer l'image horizontalement */
         }
 
+         /* Modal styles */
+       .modal {
+            display: none;
+            position: fixed;
+            z-index: 50;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            max-width: 1500px;
+            height: 750px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        } 
+
+        iframe {
+            width: 100%;
+            border: none;
+            flex-grow: 1;
+        }
+        .download-btn {
+            align-self: flex-end;
+            margin-top: 10px;
+        }
+        .download-btn:hover {
+            background-color: #242153;
+            text-decoration: none;
+        }
+
     </style>
     
 
@@ -257,202 +307,270 @@
             <button type="button" class="week-button btn btn-outline-primary" onclick="toggleContent('week2')" data-week="week2">2ème Semaine</button>
             <button type="button" class="week-button btn btn-outline-primary" onclick="toggleContent('week3')" data-week="week3">3ème Semaine</button>
             <button type="button" class="week-button btn btn-outline-primary" onclick="toggleContent('week4')" data-week="week4">4ème Semaine</button>
-        </div>
-    </div>
-        
-
-        
-        <div id="week1" style="display: none;">
-            <div class="report-section1">
-                <h1>Rapport de Stage - Première semaine (29/05/2023 - 02/06/2023)</h1>
-        
-                <div>
-                    <h3>29/05/2023</h3>
-                    <p>Jour férié</p>
-                </div>
-        
-                <div>
-                    <h3>30/05/2023</h3>
-                    <ul>
-                        <li>Présenter toute l'équipe de l'entreprise Broussaud.</li>
-                        <li>Découvrir les étapes de production de a-z.</li>
-                        <li>Obtenir une explication concernant (Modula: une machine de stock) ⇒ sa fonction: stock les matières premières pour fabriquer une chaussette. Sa logiciel s'appelle modula qui gère la base de donnée.</li>
-                        <li>Avoir l'occasion d'être en réunion (responsable commerce, Marketing et logistique) qui se fait chaque Lundi pour traiter les points faibles, problèmes des clients et les besoins de matière première.</li>
-                        <li>Une structure global qui résume comment on gère la base de donnée de l'entreprise.</li>
-                    </ul>
-                </div>
-        
-                <div>
-                    <h3>31/05/2023</h3>
-                    <ul>
-                        <li>Faire des requêtes MySql.</li>
-                        <li>Expliquer la différence entre INNER JOIN, JOIN(standard) et LEFT JOIN qui affiche tous (avec NULL).</li>
-                        <li>Faire la connexion BDD avec des extensions SQL en visual studio code.</li>
-                        <li>Accéder à la BD Test pour stagiaire ⇒ Tache à faire: trouver numéro des jours entre date d'aujourd'hui et dernier date mouvement de métier (machines de confection) ⇒ DATEDIFF(DAY, $variable, Grade DATE());</li>
-                    </ul>
-                </div>
-        
-                <div>
-                    <h3>01/06/2023</h3>
-                    <ul>
-                        <li>L'étape suivante après la réception des commandes Shopify ⇒ intégration (Sage), Scanner code barre(statut en prep) sur notre BDD.</li>
-                        <li>3 étapes ⇒ bon commandes ⇒ bon livraison ⇒ bon facturation.</li>
-                        <li>Accéder à la BDD de Web app ⇒ Extranet: faire des codes PHP.</li>
-                        <li>Résoudre un beugue sur le code php pour transmettre les factures à format PDF ⇒ Modifier code: boucle if(i) ⇒ $iLigne++; (pour permettre d'afficher les info adresse).</li>
-                    </ul>
-                </div>
-        
-                <div>
-                    <h3>02/06/2023</h3>
-                    <ul>
-                        <li>Accéder à une BDD de Test pou s'entrainer sur les codes php et les requêtes.</li>
-                        <li>Donner une explication globale concernant la structure de site ⇒ affichage filtre (date, nom) et tableau avec tous les colonnes BDD.</li>
-                        <li>Ajouter une colonne de sélection sur la table (Html, Css) et afficher un message quand on clique sur les coches(Js).</li>
-                        <li>Sélectionner tout ou une seule coche(Jquery).</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-
-        
-        <div id="week2" style="display: none;">
-         <div class="report-section1">
-                <h1>Rapport de Stage - deuxième semaine (05/06/2023 - 09/06/2023)</h1>
-            <div>
-                <h3>05/06/2023</h3>
-                <p>Terminer la fonction qui coche ou decoche tous les choix en tableau:</p>
-            </div>
-    
-            <div>
-                <h3>06/06/2023</h3>
-                <ul>
-                    <li>Afficher idList en tableau (array) de tous les checkbox coché.</li>
-                    <li>Charger la mise en page Excel ⇒ tableau (colonnes, Data SQL “lignes”) en code php</li>
-                </ul>
-            </div>
-    
-            <div>
-                <h3>07/06/2023</h3>
-                <ul>
-                    <li>Terminer la tache: modification de tableau et affichage des lignes repetée sur une seule ligne.</li>
-                    <li>Changer les dimensions du tableau (XML).</li>
-                    
-                </ul>
-            </div>
-    
-            <div>
-                <h3>08/06/2023</h3>
-                <ul>
-                    <li>Explication de regroupement en seule ligne</li>
-                </ul>
-            </div>
-    
-            <div>
-                <h3>09/06/2023</h3>
-                <ul>
-                    <li>Faire des requêtes avec Symfony(Doctrine)</li>
-                </ul>
-            </div>
-           </div>
-         </div>
-        </div>
-
-        
-        <div id="week3" style="display: none;">
-            <div class="report-section1">
-                <h1>Rapport de Stage - troisième semaine (12/05/2023 - 16/06/2023)</h1>
-            <div>
-                <h3>12/06/2023</h3>
-                <p>Faire des recherches pour trouver la methode qui peut afficher les dates (SYMFONY)</p>
-            </div>
-    
-            <div>
-                <h3>13/06/2023</h3>
-                <ul>
-                    <li>Expliquer la méthode que je peux faire en symfony Doctrine pour trouver les dates ⇒ function getBefore()</li>
-                    <li>Découvrir les étapes de production de a-z.</li>
-                    <li>Trouver le problème qui fait l'erreur:
-                        ⇒ Les commandes davant 6 mois</li>
-                </ul>
-            </div>
-    
-            <div>
-                <h3>14/06/2023</h3>
-                <ul>
-                    <li>Faire Update vers BDD ⇒ $commandeRepository→ add($commande)</li>
-                    <li>Ajouter une colonne à travers console Symfony à BDD pour contrôler les champs anonymiser ou pas.</li>
-                    <li>Faire des requêtes MySql pour afficher un tableau de stock.</li>
-                </ul>
-            </div>
-    
-            <div>
-                <h3>15/06/2023</h3>
-                <ul>
-                    <li>Terminer à faire des requetes SQL pour afficher sur le tableau “array” le prix d'unité hors tax:<br>
-                        ⇒ $refList[$row→AR-Ref]→puht = $row→AR-Prix; ⇒ OBJET + INDEX + COL + DATA_AFFICHER</li>
-                    <li>Afficher tableau 'Stock' après choisir en “filtrer” ⇒ HTML: calculer valeur stock + total en haut du tableau.
-                    </li>
-                </ul>
-            </div>
-    
-            <div>
-                <h3>16/06/2023</h3>
-                <ul>
-                    <li>Créer un filtre de “qualité”⇒ matière première.</li>
-                    <li>Afficher le filtre quand on clique sur “stocks” et masquer le filtre “Année”.</li>
-                    <li>Modifier la requête SQL pour afficher les filtres correctes “Qualité”.</li>
-                </ul>
-            </div>
-            </div>
-        </div>
-        </div>
-
-        
-        <div id="week4" style="display: none;">
-            <div class="report-section1">
-                <h1>Rapport de Stage - quatrième semaine (19/06/2023 - 23/06/2023)</h1>
-            <div>
-                <h3>19/06/2023</h3>
-                <p>Créer un nouveau filtre en colonne designation qui permet d'afficher les “Gamme Zero”.</p>
-            </div>
-    
-            <div>
-                <h3>20/06/2023</h3>
-                <ul>
-                    <li>Ajouter la fonction “empty” pour verifier si le tableau MySQL est vide ou pas ⇒ if(!empty($refList))</li>
-                    <li>Ajouter une autre liste “client” pour filtrer les clients ⇒ afficher les resultats par “id_client”</li>
-                </ul>
-            </div>
-    
-            <div>
-                <h3>21/06/2023</h3>
-                <ul>
-                    <li>Pour exécuter une requête SQL ⇒ $result = musqli_query(RS::getConnection(),$sql)</li>
-                </ul>
-            </div>
-    
-            <div>
-                <h3>22/06/2023</h3>
-                <ul>
-                    <li>Terminer la requête SQL et trouver une solution pour afficher 2 references sur une seule ligne pour chaque commande</li>
-                </ul>
-            </div>
-    
-            <div>
-                <h3>23/06/2023</h3>
-                <ul>
-                    <li>Terminer le stage à cause d'un problème de retard le matin.</li>
-                </ul>
-            </div>
-        </div>
+            <button type="button" class="week-button btn btn-outline-primary" onclick="toggleContent('week5')" data-week="week5">5ème Semaine</button>
         </div>
     </div>
 
+        
+    
+    
+        
+
+        
+    <div id="week1" style="display: none;">
+        <div class="report-section1">
+            <h1>Rapport de Stage - Première semaine (15/01/2024 - 19/01/2024)</h1>
+    
+            <div>
+                <h3>15/01/2024</h3>
+                <ul>
+                    <li>Présentation de l'école 3iL.</li>
+                    <li>La conception de l'application demandée en PHP en Visual Studio Code.</li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>16/01/2024</h3>
+                <ul>
+                    <li>Coder la partie du vueEntete, vuePied, vueConnexion et vueInscription.</li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>17/01/2024</h3>
+                <ul>
+                    <li>Ajouter des styles CSS (Bootstrap et Tailwind).</li>
+                    <li>Coder la page À Propos et contact.</li>
+                    <li>Commencer par la vérification d'authentification( Login).</li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>18/01/2024</h3>
+                <ul>
+                    <li>Résoudre le problème de connexion ⇒ L'utilisateur peut se connecter ou se déconnecter.</li>
+                    <li>Afficher le Dashboard qu' après le Login.</li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>19/01/2024</h3>
+                <ul>
+                    <li>Ajouter la fonction qui permet d'ajouter un nouvel utilisateur.</li>
+                    <li>Mettre les coordonnées d'inscription sur la table de BDD concernée selon le choix si Patient ou Médecin.</li>
+                    <li>Pendant Login, on renvoie l'utilisateur vers “DashboardPatient” si son username sur la table connexionPatient ou vers DashboardMedecin si sur la table connexionMedecin.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+        
+
+        
+    <div id="week2" style="display: none;">
+        <div class="report-section1">
+            <h1>Rapport de Stage - Deuxième semaine (22/01/2024 - 26/01/2024)</h1>
+    
+            <div>
+                <h3>22/01/2024</h3>
+                <ul>
+                    <li>Commencer la vue du dashboard.</li>
+                    <li>Afficher les coordonnées de l'utilisateur connecté avec l'outil ($_SESSION) de PHP.</li>
+                    <li>Coder la page principale de dashboard.</li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>23/01/2024</h3>
+                <ul>
+                    <li>Ajuster le menu.</li>
+                    <li>Ajouter un tableau avec les dernières analyses de patient.</li>
+                    <li>En haut de page : 4 cartes avec des informations supplémentaires.</li>
+                    <li>Option d'analyse: télécharger scan ou saisir manuellement.</li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>24/01/2024</h3>
+                <ul>
+                    <li>Ajouter des nouvelles balises Bootstrap pour un dashboard plus stylé.</li>
+                    <li>Ajouter un bouton mode nuit.</li>
+                    <li>Coder la partie d'affichage de “Mon Compte”: Voir mes coordonnées, modifier mot de passe….</li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>25/01/2024</h3>
+                <ul>
+                    <li>Ajouter le champ Médecin traitant si l'utilisateur choisit au moment de l'inscription qu'il est un patient.</li>
+                    <li>Faire la jointure pour mettre l'id du médecin choisi sur la BD de patient correcte.</li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>26/01/2024</h3>
+                <ul>
+                    <li>Afficher le formulaire de saisie après choix saisieManuelle sur la même page où il y a le dashboard.</li>
+                    <li>Commencer à faire un formulaire similaire à la fiche d'analyse.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+        
+    <div id="week3" style="display: none;">
+        <div class="report-section1">
+            <h1>Rapport de Stage - Troisième semaine (29/01/2024 - 02/02/2024)</h1>
+    
+            <div>
+                <h3>29/01/2024</h3>
+                <ul>
+                    <li>Faire la suite de la saisie manuelle.</li>
+                    <li>Faire de JavaScript pour afficher que les types d'analyses cochés à l'étape suivante.</li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>30/01/2024</h3>
+                <ul>
+                    <li>Ajouter plus de paramètres avec JavaScript pour l'affichage de saisie manuelle.</li>
+                    <li>Terminer vueSaisieManuelle de patient.</li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>31/01/2024</h3>
+                <ul>
+                    <li>Commencer à faire les fonctions qui vont soumettre les valeurs d'analyses saisies sur le fichier CSV.</li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>01/02/2024</h3>
+                <ul>
+                    <li>Erreur sur le code de JavaScript : Après avoir cliqué sur suivant, il ne récupère pas les types choisis pour les utiliser sur le traitement de la base de données.</li>
+                    <li>Chercher les solutions.</li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>02/02/2024</h3>
+                <ul>
+                    <li>Terminer les recherches pour trouver la solution à ce problème.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+        
+    <div id="week4" style="display: none;">
+        <div class="report-section1">
+            <h1>Rapport de Stage - Quatrième semaine (05/02/2024 - 09/02/2024)</h1>
+    
+            <div>
+                <h3>05/02/2024</h3>
+                <ul>
+                    <li>Rechercher encore les solutions.</li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>06/02/2024</h3>
+                <ul>
+                    <li>Faire vueMessage.</li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>07/02/2024</h3>
+                <ul>
+                    <li>Changer la structure de projet ⇒ Ajouter pour chaque “Menu” un contrôleur à la place de JavaScript pour pouvoir envoyer et récupérer les données des cases choisies sans problème.</li>
+                    <li>Commencer vueAnalyse.</li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>08/02/2024</h3>
+                <ul>
+                    <li>Terminer vueAnalyse.</li>
+                    <li>Résoudre les problèmes d'envoi des données aux fichiers “CSV” et afficher le message de succès.</li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>09/02/2024</h3>
+                <ul>
+                    <li>Coder la partie de vue FormSaisieManuelle.</li>
+                    <li>Ajouter tous les formulaires de tous les types d'analyses.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="week5" style="display: none;">
+        <div class="report-section1">
+            <h1>Rapport de Stage - Cinquième semaine (12/02/2024 - 16/02/2024)</h1>
+    
+            <div>
+                <h3>12/02/2024</h3>
+                <ul>
+                    <li>Finir toutes les conditions en PHP pour gérer le traitement des données de tous les formulaires d'analyse.</li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>13/02/2024</h3>
+                <ul>
+                    <li>Résoudre le problème afin d'envoyer les résultats d'analyses au fichier CSV qu'on choisi plusieurs types d'analyses et on veut les traiter à la fois.</li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>14/02/2024</h3>
+                <ul>
+                    <li>Commencer l'affichage des résultats de l'analyse choisie sur le tableau de Dashboard.</li>
+                    <li>Faire la fonction JavaScript qui permet d'afficher les résultats.</li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>15/02/2024</h3>
+                <ul>
+                    <li>Tester plusieurs méthodes pour afficher les résultats de jour sélectionné sur tous les tables d'analyses.</li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>16/02/2024</h3>
+                <ul>
+                    <li>Tester plus des méthodes.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
     
 
     
     </section><br><br>
+
+    <div class="d-flex justify-content-center mt-4 mb-8">
+        <a href="#" class="btn btn-primary btn-lg" id="openModalBtn">Voir la Documentation</a>
+    </div>
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal flex">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 class="text-xl font-semibold mb-4">Documentation</h3>
+            <iframe src="docs/DOCUMENTATION appMedical.pdf"></iframe>
+            <a href="docs/DOCUMENTATION appMedical.pdf" class="download-btn mt-4 px-4 py-2 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700" download>Télécharger la Documentation</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Footer -->
     <footer
@@ -528,7 +646,7 @@
         <p><i class="fas fa-home mr-3"></i> 39B rue Camille Guérin, 87000 Limoges</p>
         <p><i class="fas fa-envelope mr-3"></i> abdelhakim22mahracha@gmail.com</p>
         <p><i class="fas fa-phone mr-3"></i> +33 652 04 99 43</p>
-        <p><i class="fas fa-link mr-3"></i> linkdin.com</p>
+        <p><i class="fas fa-link mr-3"></i> <a href="https://www.linkedin.com/in/abdelhakim-mahracha-b750a6298/">linkdin.com</a></p>
         </div>
         <!-- Grid column -->
 
@@ -539,38 +657,38 @@
                 style="width: 60px; background-color: #7c4dff; height: 2px"
                 />
             <p>
-                <!-- Facebook -->
+                <!-- Facebook 
                 <a
                 class="btn btn-primary btn-floating m-1"
                 style="background-color: #3b5998"
                 href="#!"
                 role="button"
                 ><i class="fab fa-facebook-f"></i
-                ></a>
+                ></a> -->
     
-                <!-- Twitter -->
+                <!-- Twitter 
                 <a
                 class="btn btn-primary btn-floating m-1"
                 style="background-color: #55acee"
                 href="#!"
                 role="button"
                 ><i class="fab fa-twitter"></i
-                ></a>
+                ></a> -->
     
-                <!-- Instagram -->
+                <!-- Instagram 
                 <a
                 class="btn btn-primary btn-floating m-1"
                 style="background-color: #ac2bac"
                 href="#!"
                 role="button"
                 ><i class="fab fa-instagram"></i
-                ></a>
+                ></a> -->
     
                 <!-- Linkedin -->
                 <a
                 class="btn btn-primary btn-floating m-1"
                 style="background-color: #0082ca"
-                href="#!"
+                href="https://www.linkedin.com/in/abdelhakim-mahracha-b750a6298/"
                 role="button"
                 ><i class="fab fa-linkedin-in"></i
                 ></a>
@@ -578,7 +696,7 @@
                 <a
                 class="btn btn-primary btn-floating m-1"
                 style="background-color: #333333"
-                href="#!"
+                href="https://github.com/mahracha02"
                 role="button"
                 ><i class="fab fa-github"></i
                 ></a>
@@ -614,6 +732,7 @@
         document.getElementById('week2').style.display = 'none';
         document.getElementById('week3').style.display = 'none';
         document.getElementById('week4').style.display = 'none';
+        document.getElementById('week5').style.display = 'none';
         // Ajouter la classe active au bouton de la semaine sélectionnée
         document.querySelectorAll('.week-button').forEach(button => {
             button.classList.remove('active');
@@ -624,6 +743,7 @@
         document.getElementById('week2').style.display = 'block';
         document.getElementById('week3').style.display = 'none';
         document.getElementById('week4').style.display = 'none';
+        document.getElementById('week5').style.display = 'none';
         // Ajouter la classe active au bouton de la semaine sélectionnée
         document.querySelectorAll('.week-button').forEach(button => {
             button.classList.remove('active');
@@ -634,6 +754,7 @@
         document.getElementById('week2').style.display = 'none';
         document.getElementById('week3').style.display = 'block';
         document.getElementById('week4').style.display = 'none';
+        document.getElementById('week5').style.display = 'none';
         // Ajouter la classe active au bouton de la semaine sélectionnée
         document.querySelectorAll('.week-button').forEach(button => {
             button.classList.remove('active');
@@ -644,16 +765,30 @@
         document.getElementById('week2').style.display = 'none';
         document.getElementById('week3').style.display = 'none';
         document.getElementById('week4').style.display = 'block';
+        document.getElementById('week5').style.display = 'none';
         // Ajouter la classe active au bouton de la semaine sélectionnée
         document.querySelectorAll('.week-button').forEach(button => {
             button.classList.remove('active');
         });
         document.querySelector('.week-button[data-week="week4"]').classList.add('active');
-    } else {
+    } else if (weekId === 'week5') {
         document.getElementById('week1').style.display = 'none';
         document.getElementById('week2').style.display = 'none';
         document.getElementById('week3').style.display = 'none';
         document.getElementById('week4').style.display = 'none';
+        document.getElementById('week5').style.display = 'block';
+        // Ajouter la classe active au bouton de la semaine sélectionnée
+        document.querySelectorAll('.week-button').forEach(button => {
+            button.classList.remove('active');
+        });
+        document.querySelector('.week-button[data-week="week5"]').classList.add('active');
+    } 
+    else {
+        document.getElementById('week1').style.display = 'none';
+        document.getElementById('week2').style.display = 'none';
+        document.getElementById('week3').style.display = 'none';
+        document.getElementById('week4').style.display = 'none';
+        document.getElementById('week5').style.display = 'none';
     }
 }  
            

@@ -220,7 +220,14 @@
                             <div class="card swiper-slide">
                                 <div class="card-content">
                                     <div class="card-image ">
-                                        <img src="photos/database.png" alt="Symfony">
+                                        <img src="photos/database.png" alt="MySql">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card swiper-slide">
+                                <div class="card-content">
+                                    <div class="card-image">
+                                        <img src="photos/symfony.png" alt="Symfony">
                                     </div>
                                 </div>
                             </div>
@@ -231,6 +238,13 @@
                                     </div>
                                 </div>
                             </div>  
+                            <div class="card swiper-slide">
+                                <div class="card-content">
+                                    <div class="card-image">
+                                        <img src="photos/js.png" alt="JavaScript">
+                                    </div>
+                                </div>
+                            </div>
                             
                             
                         </div>
@@ -244,19 +258,23 @@
             
             <div class="bg-white py-24 sm:py-32">
                 <div class="mx-auto max-w-7xl px-6 lg:px-8">
-                    <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
-                    <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-                        <dt class="text-base leading-7 text-gray-600">Pendant les 2 années</dt>
-                        <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">10 Projets Pro</dd>
-                    </div>
-                    <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-                        <dt class="text-base leading-7 text-gray-600">De programmation </dt>
-                        <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">5 Langages   </dd>
-                    </div>
-                    <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-                        <dt class="text-base leading-7 text-gray-600">D'analyse médicale</dt>
-                        <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">1 Grand Projet</dd>
-                    </div>
+                    <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center md:grid-cols-4">
+                        <div class="mx-auto flex max-w-xs flex-col gap-y-4 mb-8">
+                            <dt class="text-base leading-7 text-gray-600">Pendant les 2 années</dt>
+                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl lg:text-4xl">10 Projets</dd>
+                        </div>
+                        <div class="mx-auto flex max-w-xs flex-col gap-y-4 mb-8">
+                            <dt class="text-base leading-7 text-gray-600">De programmation</dt>
+                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl lg:text-4xl">5 Langages</dd>
+                        </div>
+                        <div class="mx-auto flex max-w-xs flex-col gap-y-4 mb-8">
+                            <dt class="text-base leading-7 text-gray-600">De développement</dt>
+                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl lg:text-4xl">2&nbsp;Frameworks&nbsp;</dd>
+                        </div>
+                        <div class="mx-auto flex max-w-xs flex-col gap-y-4 mb-8">
+                            <dt class="text-base leading-7 text-gray-600">D'analyse médicale</dt>
+                            <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl lg:text-4xl">1&nbsp;Grand&nbsp;Projet</dd>
+                        </div>
                     </dl>
                 </div>
             </div>
@@ -647,7 +665,78 @@
                 </div>
             </div>
 
-           
+            <section>
+                <div class="row justify-content-center align-items-center">
+                    <!-- Premier icône -->
+                    <div class="col-md-auto">
+                        <div class="card rounded-circle gradient-animation rotate-horizontal">
+                            <div class="card-Body text-center">
+                                <i class="fab fa-symfony fa-3x text-primary"></i>
+                                <p class="text-center mt-4" style="color: #fff;">Symfony est un framework PHP open-source pour le développement d'applications web.</p>
+                                <a class="btn btn-primary mt-4" href="https://symfony.com/">Découvrir</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Deuxième icône -->
+                    <div class="col-md-auto">
+                        <div class="card rounded-circle gradient-animation rotate-horizontal">
+                            <div class="card-Body text-center">
+                                <i class="fab fa-php fa-3x text-primary"></i>
+                                <p class="text-center mt-4" style="color: #fff;">PHP est un langage de script côté serveur populaire, particulièrement adapté au développement web.</p>
+                                <a class="btn btn-primary mt-4" href="https://www.php.net/">Découvrir</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Troisième icône -->
+                    <div class="col-md-auto">
+                        <div class="card rounded-circle gradient-animation rotate-horizontal">
+                            <div class="card-Body text-center">
+                                <i class="fab fa-java fa-3x text-primary"></i>
+                                <p class="text-center mt-4" style="color: #fff;">Java est un langage de programmation orienté objet utilisé pour développer une variété d'applications.</p>
+                                <a class="btn btn-primary mt-4" href="https://www.java.com/">Découvrir</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            
+            
+            
+        
+            <style>
+                .gradient-animation {
+                    background: linear-gradient(45deg, #2e9bd2, #17A2B8, #d8c496a7, #6610F2);
+                    background-size: 400% 400%;
+                    animation: gradient 15s ease infinite;
+                    margin: 20px; /* Espacement entre les icônes */
+                }
+            
+                @keyframes gradient {
+                    0% {
+                        background-position: 0% 50%;
+                    }
+                    50% {
+                        background-position: 100% 50%;
+                    }
+                    100% {
+                        background-position: 0% 50%;
+                    }
+                }
+            
+                .rotate-horizontal {
+                    margin: 40px; /* Espacement entre les icônes */
+                    transition: transform 1s ease;
+                }
+
+                .rotate-horizontal:hover {
+                    transform: rotateY(180deg);
+                    
+                }
+            </style>
+            
+            
+            
               
 
 
@@ -661,7 +750,7 @@
                                 <span class="overlay"></span>
 
                                 <div class="card-image">
-                                    <img src="photos/cooking.png" alt="" class="card-img">
+                                    <img src="photos/iconAnalim.jpg" alt="" class="card-img">
                                 </div>    
                             </div>
 
@@ -686,7 +775,7 @@
                                 <span class="overlay"></span>
 
                                 <div class="card-image">
-                                    <img src="photos/take-a-photo.png" alt="" class="card-img">
+                                    <img src="photos/jardinier.png" alt="" class="card-img">
                                 </div>    
                             </div>
 
@@ -710,7 +799,7 @@
                                 <span class="overlay"></span>
 
                                 <div class="card-image">
-                                    <img src="photos/presentation.png" alt="" class="card-img">
+                                    <img src="photos/Laboratoire-médical.png" alt="" class="card-img">
                                 </div>    
                             </div>
 
@@ -762,129 +851,135 @@
 
             <section class="veilleTech" id="veilleTech">
                 <div class="content-veilleTech">
-                    <h2 class="text-3xl font-bold mb-4">Veille Thechnologie</h2>
+                    <h2 class="text-3xl font-bold mb-4">Veille Technologique</h2>
                     <section class="case-study">
                         <div class="container">
-                          <div class="row">
-                            <div class="col-md-12">
-                              <h4 class="sub-heading">EXCLUSIF</h4>
-                              <h1 class="heading purple" style="overflow-y: hidden"><span class="purple">2024:</span> Voici <br>Les 5 grandes tendances technologiques</h1>
-                              <!-- Swiper -->
-                            <div class="slide-contenu">
-                              <div class="swiper-container client-swiper">
-                                <div class="swiper-wrapper">
-                                  <div class="swiper-slide client-box">
-                                    <img src="photos/Veille.jpg" class="client-logo">
-                                    <h3 class="text-left title"><b>L’IA générative : l’automatisation au quotidien</b></h3>
-                                    <p class="text-parag">2023 a été l’année où l’IA générative a fait irruption dans le courant dominant. 
-                                        2024 sera l’année où le monde découvrira à quel point elle peut être puissante et utile. 
-                                        Aujourd’hui, si vous n’êtes pas un technicien, la simple expression « intelligence artificielle » 
-                                        (IA) peut vous mettre mal à l’aise. Si vous ne craignez pas qu’elle prenne le contrôle du monde ou 
-                                        qu’elle détruise la race humaine, vous avez peut-être peur que celle-ci vous fasse perdre votre emploi.
-
-                                        Mais au fur et à mesure que l’IA générative se fraye un chemin dans les applications que nous utilisons 
-                                        tous les jours, des moteurs de recherche aux logiciels de bureautique, en passant par les progiciels de 
-                                        conception et les outils de communication, les gens finiront par comprendre son potentiel. Utilisée 
-                                        correctement, elle revient à disposer d’un assistant personnel super intelligent 24 heures sur 24,
-                                        7 jours sur 7, qui nous rend plus efficaces, plus rapides et plus productifs.
-                                        
-                                        Plus important encore, en confiant à l’IA les tâches quotidiennes répétitives – obtenir des informations,
-                                        planifier, gérer la conformité, organiser des idées, structurer des projets -, nous disposerons de plus 
-                                        de temps pour exploiter nos compétences véritablement humaines. Nous passerons plus de temps à être créatifs, 
-                                        à explorer de nouvelles idées et une pensée originale, ou à communiquer avec des humains plutôt qu’à 
-                                        programmer des machines. Le génie est sorti de la bouteille, 
-                                        et bien qu’il reste des défis indéniables à relever en matière d’éthique et de réglementation, 
-                                        2024 sera probablement l’année où tout le monde commencera à comprendre à quel point l’IA générative transformera nos vies.</p><br>
-                                    <p class="text-left tag">Forbes, Website</p>
-                                    <p class="text-left"><a href="https://www.forbes.fr/technologie/exclusif-les-5-grandes-tendances-technologiques-en-2024/">Voir plus &#8594;</a></p>
-                                  </div>
-                                  <div class="swiper-slide client-box">
-                                    <img src="photos/veille2.jpg" class="client-logo">
-                                    <h3 class="text-left title"><b>Convergence phygitale</b></h3>
-                                    <p>Le réel et le numérique sont de plus en plus imbriqués. Des technologies telles que la réalité augmentée (RA),
-                                         la réalité virtuelle (RV) et l’internet immersif font tomber les barrières entre le monde physique et les 
-                                         domaines numériques où nous passons de plus en plus de temps. Plus que jamais, nous existons en tant 
-                                         qu’avatars numériques dans des environnements virtuels. C’est vrai pour le travail, où nous collaborons 
-                                         à distance grâce à des plateformes telles que Zoom, Teams et Slack, et pour le jeu, où les jeux en ligne 
-                                         et les sports électroniques sont plus populaires que jamais. Nous utilisons des applications sociales 
-                                         telles que TikTok et Instagram pour créer des espaces virtuels où nous partageons des moments de notre 
-                                         vie « réelle ». 
-                                        Ces moments sont sélectionnés et filtrés pour créer des personnalités numériques qui deviennent notre « moi virtuel ».</p><br>
-                                    <p class="text-left tag">Forbes, Website</p>
-                                    <p class="text-left"><a href="https://www.forbes.fr/technologie/exclusif-les-5-grandes-tendances-technologiques-en-2024/">Voir plus &#8594;</a></p>
-                                  </div>
-                                  <div class="swiper-slide client-box">
-                                    <img src="photos/veille3.jpg" class="client-logo">
-                                    <h3 class="text-left title"><b>Technologie durable</b></h3>
-                                    <p>
-                                        La technologie durable comprend des façons plus écologiques de faire les choses que nous faisons déjà – 
-                                        comme les voitures électriques, les vélos et les transports publics qui continueront d’augmenter leur 
-                                        part de marché en 2024. Elles comprennent également de nouvelles solutions aux problèmes environnementaux,
-                                         telles que le captage et le stockage du carbone, ainsi que des technologies d’énergie verte et renouvelable. 
-                                         L’économie circulaire deviendra un concept de plus en plus important à mesure que la durabilité, la 
-                                         recyclabilité et la réutilisation seront intégrées directement dans les produits au stade de la conception. 
-                                         Le monde de la technologie adoptera des idées telles que le Green cloud computing, où l’infrastructure et 
-                                         les services donnent la priorité à la réduction de la consommation d’énergie et des émissions de carbone, 
-                                         et les applications durables – 
-                                        des outils logiciels conçus pour nous aider à vivre d’une manière plus respectueuse de l’environnement.
-                                    </p><br>
-                                    <p class="text-left tag">Forbes, Website</p>
-                                    <p class="text-left"><a href="https://www.forbes.fr/technologie/exclusif-les-5-grandes-tendances-technologiques-en-2024/">Voir plus &#8594;</a></p>
-                                  </div>
-                                  <div class="swiper-slide client-box">
-                                    <img src="photos/CYBERRESILIENCE-1-01.jpg" class="client-logo">
-                                    <h3 class="text-left title"><b>La cyber-résilience</b></h3>
-                                    <p>
-                                        La recherche suggère qu’une entreprise sur deux a été victime d’une cyberattaque réussie au cours des 
-                                        trois dernières années, et le coût de ces attaques pour l’industrie devrait atteindre plus de 10 000 
-                                        milliards de dollars (9 300 milliards d’euros) d’ici à la fin de 2024. Face à cette menace croissante, 
-                                        les solutions technologiques conçues pour renforcer les défenses et nous donner une chance 
-                                        de nous battre figurent en bonne place sur la liste des incontournables de chaque organisation.
-                                        La cyber-résilience va toutefois au-delà de la cybersécurité, puisqu’elle englobe également les mesures 
-                                        qui peuvent être prises pour récupérer et assurer la continuité lorsque les défenses sont violées ou en 
-                                        raison de circonstances indépendantes de notre volonté. Cela peut signifier la mise en place de procédures 
-                                        de travail à distance pour s’assurer que les entreprises peuvent fonctionner lorsque le personnel ne peut 
-                                        pas se rendre dans les sites centraux – une solution technologique qui pourrait ne pas être traditionnellement
-                                        considérée comme un élément de la cybersécurité.
-                                    </p>
-                                    <p class="text-left tag">Forbes, Website</p>
-                                    <p class="text-left"><a href="https://www.forbes.fr/technologie/exclusif-les-5-grandes-tendances-technologiques-en-2024/">Voir plus &#8594;</a></p>
-                                  </div>
-                                  <div class="swiper-slide client-box">
-                                    <img src="photos/OIP.jpg" class="client-logo">
-                                    <h3 class="text-left title"><b>Informatique quantique</b></h3>
-                                    <p>
-                                        L’informatique quantique fait l’objet d’un engouement croissant depuis un certain temps, et 2024 marquera 
-                                        probablement l’année de la transition vers des avantages tangibles. Les ordinateurs quantiques sont capables
-                                         d’effectuer un grand nombre de calculs simultanément en exploitant des éléments étranges et merveilleux de 
-                                         la physique quantique, tels que l’intrication et la superposition quantiques. Cela leur permet de fonctionner 
-                                         à l’aide de bits quantiques (qubits) qui peuvent exister dans plusieurs états simultanément, 
-                                        plutôt que dans un état de 1 ou 0, comme les bits informatiques traditionnels.
-                                    </p>
-                                    <p class="text-left tag">Forbes, Website</p>
-                                    <p class="text-left"><a href="https://www.forbes.fr/technologie/exclusif-les-5-grandes-tendances-technologiques-en-2024/">Voir plus &#8594;</a></p>
-                                  </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h4 class="sub-heading">EXCLUSIF</h4>
+                                    <h1 class="heading purple" style="overflow-y: hidden;"><span class="purple">2024:</span> Voici Les 6 Veilles Technologiques</h1>
+                                    <div class="row">
+                                        <!-- Veille 1 -->
+                                        <div class="col-md-4 mb-4">
+                                            <div class="card h-100 shadow-sm text-center">
+                                                <div class="card-body">
+                                                    <div class="icon-container mb-4">
+                                                        <i class="fas fa-robot fa-3x rounded-circle bg-primary text-white p-3"></i>
+                                                    </div>
+                                                    <h5 class="card-title"><b>Utilisation de ChatGPT</b></h5>
+                                                    <p class="card-text">L'utilisation de ChatGPT s'est répandue dans divers domaines, allant de l'éducation à la gestion des services clients. ChatGPT aide à automatiser les tâches de rédaction, offre un soutien interactif aux utilisateurs et améliore l'efficacité des processus en fournissant des réponses instantanées et précises.</p>
+                                                    <a href="https://www.openai.com/chatgpt" class="btn btn-primary btn-custom">Voir plus &#8594;</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Veille 2 -->
+                                        <div class="col-md-4 mb-4">
+                                            <div class="card h-100 shadow-sm text-center">
+                                                <div class="card-body">
+                                                    <div class="icon-container mb-4">
+                                                        <i class="fas fa-laptop-code fa-3x rounded-circle bg-secondary text-white p-3"></i>
+                                                    </div>
+                                                    <h5 class="card-title"><b>Suivre des cours sur des plateformes comme Udemy et YouTube</b></h5>
+                                                    <p class="card-text">Les plateformes d'apprentissage en ligne telles qu'Udemy et YouTube sont des ressources inestimables pour les développeurs souhaitant acquérir de nouvelles compétences ou approfondir leurs connaissances. Ces plateformes offrent une vaste gamme de cours et de tutoriels.</p>
+                                                    <a href="https://www.udemy.com/" class="btn btn-primary btn-custom">Voir plus sur Udemy &#8594;</a>
+                                                    <a href="https://www.youtube.com/" class="btn btn-secondary btn-custom">Voir plus sur YouTube &#8594;</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Veille 3 -->
+                                        <div class="col-md-4 mb-4">
+                                            <div class="card h-100 shadow-sm text-center">
+                                                <div class="card-body">
+                                                    <div class="icon-container mb-4">
+                                                        <i class="fas fa-users fa-3x rounded-circle bg-success text-white p-3"></i>
+                                                    </div>
+                                                    <h5 class="card-title"><b>Intégrer des groupes sur les réseaux sociaux de développeurs</b></h5>
+                                                    <p class="card-text">Les réseaux sociaux professionnels et communautaires comme LinkedIn, Reddit, et Stack Overflow sont des plateformes idéales pour les développeurs souhaitant rester informés des dernières tendances et partager des informations.</p>
+                                                    <a href="https://www.linkedin.com/" class="btn btn-primary btn-custom">Voir plus sur LinkedIn &#8594;</a>
+                                                    <a href="https://www.reddit.com/r/programming/" class="btn btn-secondary btn-custom">Voir plus sur Reddit &#8594;</a>
+                                                    <a href="https://stackoverflow.com/" class="btn btn-success btn-custom">Voir plus sur Stack Overflow &#8594;</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Veille 4 -->
+                                        <div class="col-md-4 mb-4">
+                                            <div class="card h-100 shadow-sm text-center">
+                                                <div class="card-body">
+                                                    <div class="icon-container mb-4">
+                                                        <i class="fas fa-newspaper fa-3x rounded-circle bg-danger text-white p-3"></i>
+                                                    </div>
+                                                    <h5 class="card-title"><b>Lire des articles sur les nouvelles technologies</b></h5>
+                                                    <p class="card-text">La lecture d'articles et de blogs technologiques est cruciale pour rester à jour avec les innovations et les développements récents. Des sites comme TechCrunch, Wired, et Medium offrent des analyses approfondies et des nouvelles de l'industrie technologique.</p>
+                                                    <a href="https://techcrunch.com/" class="btn btn-primary btn-custom">Voir plus sur TechCrunch &#8594;</a>
+                                                    <a href="https://www.wired.com/" class="btn btn-secondary btn-custom">Voir plus sur Wired &#8594;</a>
+                                                    <a href="https://medium.com/topic/technology" class="btn btn-success btn-custom">Voir plus sur Medium &#8594;</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Veille 5 -->
+                                        <div class="col-md-4 mb-4">
+                                            <div class="card h-100 shadow-sm text-center">
+                                                <div class="card-body">
+                                                    <div class="icon-container mb-4">
+                                                        <i class="fas fa-code fa-3x rounded-circle bg-warning text-white p-3"></i>
+                                                    </div>
+                                                    <h5 class="card-title"><b>W3Schools pour apprendre les bases de la programmation</b></h5>
+                                                    <p class="card-text">W3Schools est une ressource incontournable pour les débutants en programmation. Le site offre des tutoriels interactifs et des exercices pratiques sur divers langages de programmation et technologies web.</p>
+                                                    <a href="https://www.w3schools.com/" class="btn btn-primary btn-custom">Voir plus sur W3Schools &#8594;</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Veille 6 -->
+                                        <div class="col-md-4 mb-4">
+                                            <div class="card h-100 shadow-sm text-center">
+                                                <div class="card-body">
+                                                    <div class="icon-container mb-4">
+                                                        <i class="fas fa-shield-alt fa-3x rounded-circle bg-info text-white p-3"></i>
+                                                    </div>
+                                                    <h5 class="card-title"><b>Sites de cybersécurité</b></h5>
+                                                    <p class="card-text">La cybersécurité est une préoccupation majeure pour les développeurs et les entreprises. Des sites spécialisés comme Krebs on Security, SecurityWeek, et le blog de l'OWASP fournissent des informations vitales sur les menaces actuelles et les meilleures pratiques de sécurité.</p>
+                                                    <a href="https://krebsonsecurity.com/" class="btn btn-primary btn-custom">Voir plus sur Krebs on Security &#8594;</a>
+                                                    <a href="https://www.securityweek.com/" class="btn btn-secondary btn-custom">Voir plus sur SecurityWeek &#8594;</a>
+                                                    <a href="https://owasp.org/" class="btn btn-success btn-custom">Voir plus sur OWASP &#8594;</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <!-- End of row -->
                                 </div>
-                               <div class="swiper-button-prev swiper-navBtn"></div>
-                               <div class="swiper-button-next swiper-navBtn"></div>
-                               <div class="swiper-pagination-veille text-center"></div>  
-                              </div>
-
-                              <!-- Contenu caché -->
-                              
-                                  
                             </div>
-                            
-                            
-                            
-
-                    
-                              
-                            
-                            </div>
-                          </div>
                         </div>
                     </section>
+                </div>
+            </section>
+            
+            <!-- FontAwesome CSS -->
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+             <style>
+                .icon-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100px;
+                    height: 100px;
+                    margin: 0 auto 20px;
+                    border-radius: 50%;
+                }
+                .btn-custom {
+                    width: 100%;
+                    margin: 5px 0;
+                }
+                .card-body {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+            </style>
+            
+            
+            
+            
                       
 
                       

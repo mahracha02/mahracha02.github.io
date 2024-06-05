@@ -87,6 +87,21 @@ var swiper = new Swiper(".mySwiper", {
     },
   });
 
+  var swiper = new Swiper('.swiper-container-img', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    speed: 1000, // Animation speed
+});
+
   // Get the modal
   var modal = document.getElementById("myModal");
 
